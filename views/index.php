@@ -4,7 +4,9 @@ include ROOT.'/views/layouts/header.php';
 ?>
 
 <body>
+<a id="home" href=" ">Назад</a>
 <!--Вывод карточек мастеров-->
+<div class="datepicker-here">Выберите дату</div>
 <div id="container">
 <?php foreach ($masters as $master):?>
 
@@ -28,45 +30,50 @@ include ROOT.'/views/layouts/header.php';
 </div>
 
 
-
-
-
-<div class="timead"></div>
-<!--<div class="datepicker-here"></div> -->
-<div id="dater"></div>
-
-
-
     <script>
-        //активные даты с сегдняшнего дня
-        $('.datepicker-here').datepicker({
-            minDate: new Date()
-        });
+      var calendar = $('.datepicker-here');  // инициализация переменной календарем
+      var goHome = $('#home');              //инициализация переменной ссылкой на главную
+      calendar.hide();
+      goHome.hide();
+      //заполнение массива выходных дней из бд для каждого мастера
+      var holiday=[
+      <?php foreach ($masters as $master) {
+          echo "[" . $master['holiday']."],";
+      }
+      ?>];
 
-        //неактивные дни недели от 0 до 6
-        var disabledDays = [0, 5];
+      $( function() {
+          $('.masters').click( function() {
+              //получение id мастера по клику
+              var id = $(this).attr('id');
+              //скрываем контейнер с мастерами
+              var container= $('#container').hide();
+              //показываем ссылку домой если она скрыта и наоборот
+              goHome.toggle();
+              //активные даты с сегдняшнего дня
+              calendar.datepicker({
+                  minDate: new Date()
+              });
 
-        //функция применения неактивных дней
-        $('.datepicker-here').datepicker({
-            onRenderCell: function (date, cellType) {
-                if (cellType == 'day') {
-                    var day = date.getDay(),
-                        isDisabled = disabledDays.indexOf(day) != -1;
+              //неактивные дни недели от 0 до 6
+              //получаем из массива holiday по id мастера              
+             var disabledDays = holiday[id-1];
 
-                    return {
-                        disabled: isDisabled
-                    }
-                }
-            }
-        });
-
-
-
-        $( function() {
-             $('.masters').click( function() {
-             var id = $(this).attr('id');
-             var url = "ajax/master/"+id;
-             $('#container').load(url);
+              //функция применения неактивных дней
+              calendar.datepicker({
+                  onRenderCell: function (date, cellType) {
+                         if (cellType == 'day') {
+                             var day = date.getDay(),
+                                 isDisabled = disabledDays.indexOf(day) != -1;
+                             return {
+                                 disabled: isDisabled
+                             }
+                         }
+                     }
+                 });   
+              
+             //показываем календарь 
+             calendar.show();
              });
             
             /*
@@ -89,7 +96,7 @@ include ROOT.'/views/layouts/header.php';
 
 
     </script>
-</body>
+
 
 
 <? include ROOT.'/views/layouts/footer.php';
