@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
-
+body {
+    margin: auto;
+    padding-top: 100px;
+    width: 1000px;
+    font-family: 'Open Sans', sans-serif;
+}
 .masters{
     display: inline-block;
     width:300px;
@@ -8,12 +13,9 @@
     font-size: 20pt;
     margin: 30px;
 }
-body {
-    margin: auto;
-    padding-top: 100px;
-    width: 1000px;
-    font-family: 'Open Sans', sans-serif;
 
+.datepicker-here{
+    text-align: center;
 }
 
 /*hover masters*/
@@ -111,6 +113,8 @@ body {
 }
 
 /*конец hover masters*/
+
+
 
 
 

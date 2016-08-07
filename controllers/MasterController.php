@@ -9,10 +9,10 @@ class MasterController{
 
     public function actionInfo($p1=1)
     {
-        
-        
-        
-      
+
+
+
+
         echo $p1;
 
         return true;

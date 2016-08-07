@@ -1,3 +1,18 @@
+/*мои настройки*/
+.datepicker--cell {
+  height:50px; /*высота строки*/
+}
+.datepicker{
+  margin: 0 auto;
+  width: 500px; /*ширина календаря*/
+}
+
+
+
+/*конец моих настроек*/
+
+
+
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
   color: #dedede; }
   .datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
@@ -43,7 +58,6 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
   z-index: 1; }
   .datepicker--cell.-focus- {
     background: #f0f0f0; }
@@ -160,10 +174,7 @@
 /* -------------------------------------------------
     Datepicker
    ------------------------------------------------- */
-.datepickers-container {
-  position: absolute;
-  left: 0;
-  top: 0; }
+
   @media print {
     .datepickers-container {
       display: none; } }
@@ -177,7 +188,6 @@
   font-family: Tahoma, sans-serif;
   font-size: 20px;
   color: #4a4a4a;
-  width: 750px;
   position: absolute;
   left: -100000px;
   opacity: 0;
