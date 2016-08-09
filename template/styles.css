@@ -5,6 +5,9 @@ body {
     width: 1000px;
     font-family: 'Open Sans', sans-serif;
 }
+h2{
+   text-align: center;
+}
 .masters{
     display: inline-block;
     width:300px;
@@ -17,6 +20,33 @@ body {
 .datepicker-here{
     text-align: center;
 }
+/*таблица выбора времени записи*/
+table.record-table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: -70px;
+
+}
+
+table.record-table th,
+table.record-table td {
+    border: 1px solid #000;
+    text-align: center;
+    width: 150px;
+}
+
+table.record-table th{
+    font-size: 20px;
+}
+td:nth-child(2) {
+    background: green; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+}
+.busy{
+    background-color: red !important;
+}
+
+
 
 /*hover masters*/
 .view {

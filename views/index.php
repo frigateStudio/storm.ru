@@ -3,7 +3,7 @@ include ROOT.'/views/layouts/header.php';
 
 ?>
 
-<body>
+
 <a id="home" href=" ">Назад</a>
 <!--Вывод карточек мастеров-->
 <div class="datepicker-here">Выберите дату</div>
