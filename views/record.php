@@ -1,33 +1,18 @@
 <?php
-include ROOT.'/views/layouts/header.php';
 
-$times = array("8:00",
-                "8:30",
-                "9:00",
-                "9:30",
-                "10:00",
-                "10:30",
-                "11:00",
-                "11:30",
-                "12:00",
-                "12:30",
-                "13:00",
-                "13:30",
-                "14:00",
-                "14:30",
-                "15:00",
-                "15:30",
-                "16:00",
-                "16:30",
-                "17:00",
-                "17:30",
-                "18:00",
-                "18:30"
-    );
+
+$routesPath = ROOT.'/config/times.php';
+$times = include($routesPath);
+
 $busy=array(12,1,20,21);
 $status="Свободно";
 $i=0;
+$date = strftime("%d %B, %Y, %A",$timestamp);
 ?>
+<h2 class="master-record">Мастер: <? echo $nameMaster?></h2>
+<h2 class="date-record"><? echo $date;?></h2>
+
+<h3 class="header">Выберите время</h3>
 <table class="record-table">
 
     <tr>
@@ -37,113 +22,31 @@ $i=0;
     <?foreach ($times as $time){
        if(in_array($i,$busy))
            $status="Занято";
-        echo "<tr><td>$time</td><td ";
+        if($i>$limit_day)
+            break;
+        echo "<tr><td>$time</td><td id='$i' ";
         if($status=="Занято")
-            echo 'class = "busy"';
+            echo 'class = "busyTime"';
+        else
+            echo 'class = "freeTime"';
         echo ">$status</td></tr>";
         $status="Свободно";
         $i++;
     }?>
-    <!--
-    <tr>
-        <td>8:00</td>
-        <td>Cвободно</td>
-    </tr>
 
-   <tr>
-        <td>8:30</td>
-        <td>Cвободно</td>
-    </tr>
-
-   <tr>
-        <td>9:00</td>
-        <td>Cвободно</td>
-    </tr>
-
-   <tr>
-        <td>9:30</td>
-        <td>Cвободно</td>
-    </tr>
- <tr>
-        <td>10:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>10:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>11:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>11:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>12:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>12:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>13:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>13:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>14:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>14:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>15:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>15:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>15:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>16:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>16:30</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>17:00</td>
-        <td>Занято</td>
-    </tr>
- <tr>
-        <td>18:00</td>
-        <td>Занято</td>
-    </tr>
-    <tr>
-        <td>18:30</td>
-        <td>Занято</td>
-    </tr>
-
-
-
-
--->
 </table>
+<div id="userInput">
+    <p><b>Мастер:</b> <?echo $nameMaster?></p>
+    <p><b>Дата:</b> <? echo $date?></p>
+    <p id="inputTime"></p>
+   <p>Имя<br><input type="text" id="name"></p>
+   <p>Фамилия<br><input type="text" id="family"></p>
+   <p>Телефон<br><input type="text" id="phone"></p>
+   <p>Желаемые услуги<br><textarea rows="8" cols="70" placeholder="Опишите процедуры, необходимые вам" id="comment"></textarea></p>
+    <span id="button_record">Записаться</span>
 
 
+</div>
 
 <?
 include ROOT.'/views/layouts/footer.php';
