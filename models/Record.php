@@ -6,13 +6,13 @@
  * Time: 0:59
  */
 class Record{
-    public static function addRecord($id_master,$date_record,$id_time_record,
-                                        $client_name,$client_family,$client_phone,
-                                     $client_comment){
+    public static function addRecord($id_master,$date_record,$id_time_record,$client_name
+    ,$client_family,$client_phone,$client_comment){
         $db=Db::getConnection();
-        $result = $db->query("INSERT INTO records (id_master,date_record,id_time_record,client_name,
-client_phone, client_famyly,client_comment) VALUES 
-($id_master,$date_record,$id_time_record,$client_name,$client_phone,$client_family,$client_comment)");
+        $result = $db->query("INSERT INTO records (id_master,date_record, id_time_record,client_name, ".
+            "client_family,client_phone, client_comment) VALUES ".
+            "('$id_master', '$date_record', '$id_time_record', '$client_name',".
+            " '$client_family', '$client_phone', '$client_comment')");
         
     }
 }

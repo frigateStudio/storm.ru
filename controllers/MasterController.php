@@ -10,13 +10,6 @@ class MasterController{
     public function actionInfo($p1=1)
     {
 
-        if (isset($_POST['name']))
-             echo $_POST['name'];
-
-
-
-       
-
         return true;
     }
 }
