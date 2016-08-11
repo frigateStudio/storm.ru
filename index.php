@@ -2,7 +2,7 @@
 
 
 // 1. Общие настройки
-
+setlocale(LC_ALL, 'ru_RU.UTF-8');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 

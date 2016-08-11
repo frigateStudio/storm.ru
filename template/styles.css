@@ -1,9 +1,30 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=cyrillic,latin);
 body {
     margin: auto;
-    padding-top: 100px;
+    padding-top: 50px;
     width: 1000px;
     font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+    font-weight: 300;
+}
+h2,h3{
+   text-align: center;
+    font-weight: 300;
+}
+h3{
+    color: brown;
+   font-weight: 300;
+}
+a{
+    color: black;
+}
+
+a:link {text-decoration: none;}
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+
+#container{
+    margin: 0 auto;
 }
 .masters{
     display: inline-block;
@@ -16,7 +37,64 @@ body {
 
 .datepicker-here{
     text-align: center;
+    margin-top: -25px;
 }
+/*таблица выбора времени записи*/
+table.record-table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    display: block;
+    float: left;
+}
+
+table.record-table th,
+table.record-table td {
+    border: 1px solid #000;
+    text-align: center;
+    width: 150px;
+}
+
+table.record-table th{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.freeTime{
+    background: green; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+}
+
+.busyTime{
+    background-color: red !important;
+    cursor: default !important;
+}
+
+.nav-button{
+    display: none;
+}
+.record-table td:nth-child(2):hover{
+    background-color: #9c9c9c;
+    color:white;
+    cursor: pointer;
+}
+#userInput{
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+}
+input, textarea{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+}
+#button_record{
+    height: 50px;
+    cursor: pointer;
+    background-color: #FF9A19;
+    padding: 5px 10px 5px 10px;
+
+}
+
 
 /*hover masters*/
 .view {
