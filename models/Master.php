@@ -22,4 +22,15 @@ class Master{
         }
         return $mastersList;
     }
+    public static function getNameMasterById($id)
+    {
+        $id=intval($id);
+        $db=Db::getConnection();
+        $result = $db->query("SELECT name FROM masters WHERE id=".$id);
+        $row = $result->fetch(PDO::FETCH_LAZY);
+        return $row->name;
+
+
+        
+    }
 }

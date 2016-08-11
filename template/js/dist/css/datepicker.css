@@ -1,7 +1,8 @@
 /*мои настройки*/
-.datepicker--cell {
-  height:50px; /*высота строки*/
+.datepicker--cell,.-other-month-{
+  height:50px ; /*высота строки*/
 }
+
 .datepicker{
   margin: 0 auto;
   width: 500px; /*ширина календаря*/
@@ -276,7 +277,6 @@
 
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
   color: #dedede;
-  height:100px !important;
 
   }
   .datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
