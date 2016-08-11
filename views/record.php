@@ -1,10 +1,8 @@
 <?php
 
-
+//echo $timestamp;
 $routesPath = ROOT.'/config/times.php';
 $times = include($routesPath);
-
-$busy=array(12,1,20,21);
 $status="Свободно";
 $i=0;
 $date = strftime("%d %B, %Y, %A",$timestamp);

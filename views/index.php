@@ -37,19 +37,13 @@ $times = include($routesPath);
 
 
     <script>
-
-       /* $.post("ajax/master/12", { name: "John", time: "2pm" },function(data) {
-            
-            alert("Data Loaded: " + data);
-            
-        } );*/
-
         //заполнение массива выходных дней из бд для каждого мастера
       var holiday=[
       <?php foreach ($masters as $master) {
           echo "[" . $master['holiday']."],";
       }
       ?>];
+
       //заполнение массива времени по шагу полчаса
       var masterName=[
           <?php foreach ($masters as $master) {
@@ -63,6 +57,7 @@ $times = include($routesPath);
           echo "['" . $time."'],";
       }
           ?>];
+
         // jQuery функция срабатывания после полной загрузки страницы
       $( function() {
 
@@ -126,13 +121,14 @@ $times = include($routesPath);
               chooseDate.show();
               
           });
+          //обработка кликов по ссылке к выбору даты
           $(document).on('click','#choose_date', function() {
               $("#container").empty();
               calendar.show();
               $(this).hide();
               return false;
           });
-
+            //обработка кликов по таблице свободного времени
           $(document).on('click','.freeTime', function() {
               $(".master-record,.date-record,.header").hide();
               $(".freeTime").css("background-color","green");
@@ -145,24 +141,24 @@ $times = include($routesPath);
               $(this).css({'background-color':'yellow','color':'black'});
               $(this).text("Выбрано");
           });
+          //обработка кликов по кнопке "записаться"
           $(document).on('click','#button_record', function() {
               var name = $("#name").val();
               var family = $("#family").val();
               var phone = $("#phone").val();
               var comment = $("#comment").val();
-              $.post("record/do", { master: id-1,date:timestamp,name: name, family: family,phone: phone,comment: comment,id_time: id_time},function(data) {
+              //передача данных из формы методом POST по адресу "record/do"
+              $.post("record/do", { master: id,date:timestamp,name: name, family: family,phone: phone,comment: comment,id_time: id_time},function(data) {
 
-                  alert(data);
+                  $('body').empty();
+                  $('body').html("<h2>Спасибо что воспользовались нашим сервисом!</h2><br>"+
+                  "<h2>Оператор свяжется с вами в ближайшее время для подтверждения записи</h2>");
 
               } );
           });
 
 
       });
-
-
-
-
     </script>
 
 

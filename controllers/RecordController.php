@@ -12,10 +12,12 @@ class RecordController{
         //количиство строк в таблице записей по рабочим дням
         if(strftime("%u",$timestamp)==6 || strftime("%u",$timestamp)==7)
             $limit_day=16;                                  //количество строк в таблице записей по выходным дням
+        $busy=Master::getBusyTimeMasterByIdByDate($id,$timestamp);
         require_once(ROOT . '/views/record.php');
 
         return true;
     }
+    //заносит данные в бд из масива POST
     public function actionDoRecord()
     {
         if (isset($_POST['name']) &&
@@ -26,17 +28,12 @@ class RecordController{
             isset($_POST['id_time'])&&
             isset($_POST['master'])
         ) {
-            //$id_master,$date_record,$id_time_record,
-           // $client_name,$client_family,$client_phone,
-                                   //  $client_comment)
-
-          Record::addRecord($_POST['master'],$_POST['date'],$_POST['id_time'],$_POST['name'],
-              $_POST['family'],$_POST['phone'],$_POST['comment']);
-            echo "норма";
-
+            Record::addRecord($_POST['master'],strftime("%Y-%m-%d",$_POST['date']),
+            $_POST['id_time'],$_POST['name'],$_POST['family'],$_POST['phone'],$_POST['comment']);
         }
         return true;
     }
+    
 
 
 }
