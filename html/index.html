@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
 </head>
 <body>
+<div class="wrapper">
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
     <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
@@ -22,5 +23,23 @@
     </menu>
 </header>
 
+<main>
+    Здесь мы эмулируем поведение таблицы, превратив блок .wrapper в таблицу, а блок .content в строку таблицы (свойства display: table и display: table-row соответственно). Благодаря этому, а также тому, что блоку .content и всем его родительским контейнерам задана высота 100%, контент растягивается на всю высоту, но за минусом высоты футера, которая определяется автоматически — эмуляция таблицы не дает подвалу вылезть за пределы высоты окна браузера.
+
+
+</main>
+    <footer>
+        <menu>
+            <ul>
+                <li><a href="#">УСЛУГИ</a></li>
+                <li><a href="#">АКЦИИ</a></li>
+                <li><a href="#">ГАЛЕРЕЯ</a></li>
+                <li><a href="#">ОТЗЫВЫ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="#">ВХОД</a></li>
+            </ul>
+        </menu>
+    </footer>
+    </div>
 </body>
 </html>
