@@ -12,7 +12,6 @@ body {
 body{
   width: 100%;
   min-width: 700px;
-  font-family: "Poiret One", sans-serif;
   font-weight: lighter;
 }
 ul {
@@ -22,7 +21,8 @@ ul {
 }
 
 a {
-  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  text-decoration: none;
+
 }
 
 
@@ -63,26 +63,25 @@ header{
   }
   menu {
       ul {
+        font-family: "Poiret One", sans-serif;
         padding-top: 40px;
         display: -webkit-flex; /* Safari */
         display: flex;
         li a{
-          display: block;
-          font-size: 15pt;
-          color: white;
-          padding:10px 12px;
-        }
+            display: block;
+            font-size: 15pt;
+            color: white;
+            padding:10px 12px;
+          }
         a:hover{
-          border: 1px solid white;
-          padding: 9px 11px;
+            border: 1px solid white;
+            padding: 9px 11px;
+          }
         }
-      }
-
-  }
-
-
+    }
 }
 footer{
+  font-family: "Poiret One", sans-serif;
   flex: 0 0 auto;
   width: 100%;
   background-image: $backGroundOrange;
@@ -93,7 +92,7 @@ footer{
       display: flex;
       li a{
         display: block;
-        font-size: 12pt;
+        font-size: 10pt;
         color: white;
         padding:10px 12px;
       }
@@ -102,9 +101,7 @@ footer{
         padding: 9px 11px;
       }
     }
-
   }
-
 }
 
 
@@ -120,59 +117,22 @@ footer{
  #logo{
    display: none;
   }
-
-
 }
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: auto; //не менять
-  height: 400px;
-  padding: 0;
-  margin: 0;
+.slider{
+  border:1px solid black;
+  div {padding: 0;}
+  img{
+    width: 100%;
+  }
 }
 
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
+#doRecord {
+  padding: 10px 20px;
+  background-color: #EF550C;
+  margin:0;
+  a {
+    color: white;
 
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-}
 
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-}
-
-.slide {
-  display:inline-block;
-  position:relative;
-
-}
-.slide h1 {
-  display:inline-block;
-  position:absolute;
-  top:30px;
-  left:0px;
-
-  /* Оформление текста */
-  color:#FFF;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:20px;
-
-  /* Фон */
-  background-color:rgba(0,0,0,.4);
-  padding:10px 30px;
+  }
 }

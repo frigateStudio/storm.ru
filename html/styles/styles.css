@@ -10,7 +10,6 @@ body {
 body {
   width: 100%;
   min-width: 700px;
-  font-family: "Poiret One", sans-serif;
   font-weight: lighter; }
 
 ul {
@@ -19,8 +18,7 @@ ul {
   padding-left: 0; }
 
 a {
-  text-decoration: none;
-  /*убираем подчеркивание текста ссылок*/ }
+  text-decoration: none; }
 
 .wrapper {
   display: flex;
@@ -51,6 +49,7 @@ header {
     top: 0;
     right: 0; }
   header menu ul {
+    font-family: "Poiret One", sans-serif;
     padding-top: 40px;
     display: -webkit-flex;
     /* Safari */
@@ -65,6 +64,7 @@ header {
       padding: 9px 11px; }
 
 footer {
+  font-family: "Poiret One", sans-serif;
   flex: 0 0 auto;
   width: 100%;
   background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%); }
@@ -76,7 +76,7 @@ footer {
       display: flex; }
       footer menu ul li a {
         display: block;
-        font-size: 12pt;
+        font-size: 10pt;
         color: white;
         padding: 10px 12px; }
       footer menu ul a:hover {
@@ -87,50 +87,18 @@ footer {
 @media (max-width: 800px) {
   #logo {
     display: none; } }
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: auto;
-  height: 400px;
-  padding: 0;
+.slider {
+  border: 1px solid black; }
+  .slider div {
+    padding: 0; }
+  .slider img {
+    width: 100%; }
+
+#doRecord {
+  padding: 10px 20px;
+  background-color: #EF550C;
   margin: 0; }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0; }
-
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left; }
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0; }
-
-.slide {
-  display: inline-block;
-  position: relative; }
-
-.slide h1 {
-  display: inline-block;
-  position: absolute;
-  top: 30px;
-  left: 0px;
-  /* Оформление текста */
-  color: #FFF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  /* Фон */
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px 30px; }
+  #doRecord a {
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */
