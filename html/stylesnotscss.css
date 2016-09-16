@@ -18,7 +18,8 @@ ul {
   padding-left: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: white; }
 
 .wrapper {
   display: flex;
@@ -27,7 +28,8 @@ a {
 
 main {
   flex: 1 0 auto;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif; 
+}
 
 header {
   background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%);
@@ -88,19 +90,28 @@ footer {
   #logo {
     display: none; } }
 .slider {
-  height: 400px;
+  height: auto;
 }
 
-  .slider div {
-    padding: 0; }
+  
   .slider img {
     width: 100%; }
 
-#doRecord {
+#doRecordd {
+    display: block;
+    text-align: center;
   padding: 10px 20px;
   background-color: #EF550C;
-  margin: 0; }
-  #doRecord a {
-    color: white; }
+   margin:0 auto;
+  width: 25%;
+}
+  #doRecord {
+    text-align: center;
+    display: block;   
+    width: 25%; 
+    background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%);
+    margin:20px auto 0 auto;
+    padding:15px 20px;
+}
 
 /*# sourceMappingURL=styles.css.map */
