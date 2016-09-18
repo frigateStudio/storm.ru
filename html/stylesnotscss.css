@@ -88,23 +88,7 @@ footer {
 
 
 
-.slider {
-  height: auto;
-}
-  
-  .slider img {
-    width: 100%; }
 
-
-  #doRecord {
-    text-align: center;
-    display: block;   
-    width: 25%; 
-    background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%);
-    margin:20px auto 0 auto;
-    padding:15px 20px;
-
-}
 
 /*# sourceMappingURL=styles.css.map */
 /*адаптация*/
