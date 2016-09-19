@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <title>Орхидея</title>
     <link href="styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slider/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slider/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('image/back.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner   = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+           $preLoader.delay(350).fadeOut('slow');
+        });
+    </script>
   </head>
+<!--endPreLoader-->
 <body>
+<div id="page-preLoader"></div>
 <div class="wrapper">
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
@@ -27,13 +52,15 @@
 <main>
 
    <div class="slider">
-
-                <div><img src="http://dummyimage.com/1500x400/329456" /></div>
-
+       <div><img src="http://dummyimage.com/1500x400/329456" /></div>
+       <div><img src="http://dummyimage.com/1500x400/423456" /></div>
+       <div><img src="http://dummyimage.com/1500x400/399096" /></div>
+       <div><img src="http://dummyimage.com/1500x400/320300" /></div>
     </div>
 
+
     
-        <a href="#" id="doRecord">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+    <a href="#" id="doRecord">ЗАПИСАТЬСЯ ОНЛАЙН</a>
     
     <div id="service-carts-container">
 
@@ -54,9 +81,10 @@
             <img src="http://dummyimage.com/295x280/329456"/>
         </div>
     </div>
+    <!--YandexMaps-->
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
 
 </main>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
 
 
 
@@ -76,42 +104,24 @@
     </div>
 
 
-<!-- Preload-->
-<style type="text/css">#hellopreloader>
-p{
-    display:none;
-}
-#hellopreloader_preload{
-    display: block;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-width: 1000px;
-    background: #B03C08 url(http://hello-site.ru//main/images/preloads/oval.svg) center center no-repeat;
-    background-size:96px;
-}
-</style>
-<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
-<script type="text/javascript">
-    var hellopreloader = document.getElementById("hellopreloader_preload");
-    function fadeOutnojquery(el){
-        el.style.opacity = 1;
-        var interhellopreloader = setInterval(function(){
-            el.style.opacity = el.style.opacity - 0.05;
-            if (el.style.opacity <=0.05){
-                clearInterval(interhellopreloader);
-                hellopreloader.style.display = "none";}
-        },16);}
-    window.onload = function(){
-        setTimeout(function(){
-            fadeOutnojquery(hellopreloader);
-        },0);
-    };
+<!--slider-->
+<script type="text/javascript" src="slider/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.slider').slick({
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrow:true,
+            prevArrow:"<img src='slider/arrow-prev.png' class='prev_arrow'>",
+            nextArrow:"<img src='slider/arrow-next.png' class='next_arrow'>",
+            pauseOnHover:false,
+            dots:true,
+            pauseOnDotsHover:true,
+        });
+    });
 </script>
-<!-- HelloPreload -->
+<!--end slider-->
+
 
 
 </body>

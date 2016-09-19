@@ -77,6 +77,18 @@ footer {
 
 .slider {
   height: auto; }
+  .slider .prev_arrow, .slider .next_arrow {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+    opacity: 0.5;
+    cursor: pointer; }
+  .slider .prev_arrow {
+    margin-top: 150px; }
+  .slider .next_arrow {
+    margin-top: -200px;
+    right: 0; }
 
 .slider img {
   width: 100%; }

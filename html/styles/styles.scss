@@ -107,6 +107,22 @@ footer{
 
 .slider {
   height: auto;
+  .prev_arrow,.next_arrow{
+    position:absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+    opacity: 0.5;
+    cursor: pointer;
+
+  }
+  .prev_arrow{
+    margin-top: 150px;
+  }
+  .next_arrow{
+    margin-top: -200px;
+    right:0;
+  }
 }
 
 .slider img {
