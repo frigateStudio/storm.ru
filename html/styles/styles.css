@@ -9,7 +9,7 @@ body {
 
 body {
   width: 100%;
-  min-width: 700px;
+  min-width: 900px;
   font-weight: lighter; }
 
 ul {
@@ -75,24 +75,6 @@ footer {
         border: 1px solid white;
         padding: 9px 11px; }
 
-.slider {
-  height: auto; }
-  .slider .prev_arrow, .slider .next_arrow {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    z-index: 10;
-    opacity: 0.5;
-    cursor: pointer; }
-  .slider .prev_arrow {
-    margin-top: 150px; }
-  .slider .next_arrow {
-    margin-top: -200px;
-    right: 0; }
-
-.slider img {
-  width: 100%; }
-
 #doRecord {
   text-align: center;
   display: block;
@@ -125,12 +107,15 @@ footer {
     font-style: normal; }
 
 /*адаптация*/
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   #logo {
     display: none; }
 
   #doRecord {
-    width: 40%; } }
+    width: 40%; }
+
+  .service-cart {
+    margin: 35px; } }
 @media (min-width: 1400px) {
   header menu ul li a {
     font-size: 20pt; }

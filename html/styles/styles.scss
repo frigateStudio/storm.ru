@@ -11,7 +11,7 @@ body {
 
 body{
   width: 100%;
-  min-width: 700px;
+  min-width: 900px;
   font-weight: lighter;
 }
 ul {
@@ -25,9 +25,6 @@ a {
   color:white;
 
 }
-
-
-
 
 
 main {
@@ -101,34 +98,6 @@ footer{
   }
 }
 
-
-
-
-
-.slider {
-  height: auto;
-  .prev_arrow,.next_arrow{
-    position:absolute;
-    height: 50px;
-    width: 50px;
-    z-index: 10;
-    opacity: 0.5;
-    cursor: pointer;
-
-  }
-  .prev_arrow{
-    margin-top: 150px;
-  }
-  .next_arrow{
-    margin-top: -200px;
-    right:0;
-  }
-}
-
-.slider img {
-  width: 100%; }
-
-
 #doRecord {
   text-align: center;
   display: block;
@@ -166,13 +135,19 @@ footer{
 }
 
 
+
 /*адаптация*/
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   #logo {
     display: none; }
   #doRecord {
     width: 40%;
   }
+  .service-cart{
+    margin: 35px;
+  }
+
+
 }
 @media (min-width: 1400px) {
   header menu ul li a {
