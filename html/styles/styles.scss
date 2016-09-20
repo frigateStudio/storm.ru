@@ -136,6 +136,58 @@ footer{
     font-style: normal;
   }
 }
+.stock{
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap: wrap;
+
+
+
+  .cart_stock{
+
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    background-color: #ddd;
+    margin: 10px auto;
+    h3{
+      background-color:#b83f0a;
+      color:white;
+      padding:10px 0;
+      font-family: "Poiret One", sans-serif;
+      font-size: 17pt;
+    }
+    img{
+      width: 300px;
+      height: 200px;
+    }
+  p{
+    padding: 10px 20px;
+    text-align: justify;
+
+  }
+  .more{
+    text-align: right;
+    margin:-10px 10px 10px 0;
+    a{
+      color:#7F2906;
+      font-weight: 400;
+    }
+
+
+  }
+
+  }
+
+
+
+
+
+}
 
 
 
