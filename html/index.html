@@ -32,16 +32,15 @@
 <!--endPreLoader-->
 <body>
 <div id="page-preLoader"></div>
-<div class="wrapper">
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
     <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
     <img id="logo" src="image/logo.png">
     <menu>
         <ul>
-            <li><a href="#">ГЛАВНАЯ</a></li>
+            <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
             <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="#">АКЦИИ</a></li>
+            <li><a href="stock.html">АКЦИИ</a></li>
             <li><a href="#">ГАЛЕРЕЯ</a></li>
             <li><a href="#">ОТЗЫВЫ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
@@ -117,9 +116,9 @@
     <footer>
         <menu>
             <ul>
-                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
                 <li><a href="#">УСЛУГИ</a></li>
-                <li><a href="#">АКЦИИ</a></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
                 <li><a href="#">ГАЛЕРЕЯ</a></li>
                 <li><a href="#">ОТЗЫВЫ</a></li>
                 <li><a href="#">КОНТАКТЫ</a></li>
@@ -127,7 +126,7 @@
             </ul>
         </menu>
     </footer>
-    </div>
+
 
 
 <!--slider-->
@@ -136,7 +135,9 @@
 <script type="text/javascript" src="slider/slick.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.slider').slick({
+       var slider= $('.slider');
+        slider.show();
+        slider.slick({
             autoplay:true,
             autoplaySpeed:3000,
             arrows:false,

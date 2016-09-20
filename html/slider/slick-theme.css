@@ -1,13 +1,8 @@
 
-
-
 .slider {
-    height: auto;
     background-color: black;
-
-
+    display: none;
 }
-
 
 .slide_desc{
     width: 400px;
@@ -27,15 +22,9 @@
 .slide_desc p{
     font-size: 15pt;
 }
-
-
-
-
-
 .slider img {
     width: 100%;
     opacity: 0.3;
-
 }
 @media (max-width: 900px) {
     .slide_desc{
@@ -46,13 +35,7 @@
 
 
 }
-
 /* Dots */
-.slick-dotted.slick-slider
-{
-
-}
-
 .slick-dots
 {
     position: absolute;
