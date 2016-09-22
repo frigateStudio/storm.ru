@@ -1,20 +1,22 @@
 $backGroundOrange: linear-gradient(270deg, #7F2906 0%, #EF550C 100%);
 
-*{
-  padding:0;
-  margin:auto;
+* {
+  padding: 0;
+  margin: auto;
 }
-html{
-   position: relative;
-   min-height: 100%;
- }
 
-body{
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
   width: 100%;
   min-width: 900px;
   font-weight: lighter;
   margin: 0 0 44px; /* bottom = footer height */
 }
+
 ul {
   list-style: none;
   margin: 0;
@@ -23,58 +25,57 @@ ul {
 
 a {
   text-decoration: none;
-  color:white;
+  color: white;
 
 }
-
 
 main {
   font-family: 'Open Sans', sans-serif;
 }
 
-
-header{
+header {
   background-image: $backGroundOrange;
   height: 160px;
   width: 100%;
 
-  #logo{
+  #logo {
     padding-left: 10px;
     padding-top: 10px;
     float: left;
   }
-  address, #phone{
+  address, #phone {
     background-color: white;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-size: 15pt;
-    color:black;
+    color: black;
     padding: 5px;
   }
-  #phone{
+  #phone {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
   }
   menu {
-      ul {
-        font-family: "Poiret One", sans-serif;
-        padding-top: 40px;
-        display: -webkit-flex; /* Safari */
-        display: flex;
-        li a{
-            display: block;
-            font-size: 15pt;
-            padding:10px 12px;
-          }
-        a:hover,.active{
-            border: 1px solid white;
-           padding: 9px 11px;
-          }
-        }
+    ul {
+      font-family: "Poiret One", sans-serif;
+      padding-top: 40px;
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      li a {
+        display: block;
+        font-size: 15pt;
+        padding: 10px 12px;
+      }
+      a:hover, .active {
+        border: 1px solid white;
+        padding: 9px 11px;
+      }
     }
+  }
 }
-footer{
+
+footer {
   font-family: "Poiret One", sans-serif;
   position: absolute;
   left: 0;
@@ -88,12 +89,12 @@ footer{
     ul {
       display: -webkit-flex; /* Safari */
       display: flex;
-      li a{
+      li a {
         display: block;
         font-size: 10pt;
-        padding:10px 12px;
+        padding: 10px 12px;
       }
-      a.active,a:hover{
+      a.active, a:hover {
         border: 1px solid white;
         padding: 9px 11px;
       }
@@ -106,11 +107,10 @@ footer{
   display: block;
   width: 25%;
   background-image: $backGroundOrange;
-  margin:20px auto 20px auto;
-  padding:15px 20px;
+  margin: 20px auto 20px auto;
+  padding: 15px 20px;
 
 }
-
 
 #service-carts-container {
   width: 100%;
@@ -122,21 +122,23 @@ footer{
   justify-content: center;
   margin-bottom: 15px;
 }
-.service-cart{
+
+.service-cart {
   margin: 5px;
   text-align: center;
-  p{
+  p {
     position: absolute;
-    margin-top:214px;
+    margin-top: 214px;
     background-color: rgba(10, 10, 10, 0.3);
     width: 295px;
-    padding:20px 0;
-    color:white;
+    padding: 20px 0;
+    color: white;
     font-size: 15pt;
     font-style: normal;
   }
 }
-.stock{
+
+.stock {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
@@ -144,75 +146,85 @@ footer{
   display: flex;
   -webkit-flex-wrap: wrap; /* Safari */
   flex-wrap: wrap;
-
-
-
-  .cart_stock{
-
+  .cart_stock {
     text-align: center;
     height: 400px;
     width: 300px;
     background-color: #ddd;
     margin: 10px auto;
-    h3{
-      background-color:#b83f0a;
-      color:white;
-      padding:10px 0;
+    h3 {
+      background-color: #b83f0a;
+      color: white;
+      padding: 10px 0;
       font-family: "Poiret One", sans-serif;
       font-size: 17pt;
     }
-    img{
+    img {
       width: 300px;
       height: 200px;
     }
-  p{
-    padding: 10px 20px;
-    text-align: justify;
+    p {
+      padding: 10px 20px;
+      text-align: justify;
 
-  }
-  .more{
-    text-align: right;
-    margin:-10px 10px 10px 0;
-    a{
-      color:#7F2906;
-      font-weight: 400;
     }
-
-
+    .more {
+      text-align: right;
+      margin: -10px 10px 10px 0;
+      a {
+        color: #7F2906;
+        font-weight: 400;
+      }
+    }
   }
-
-  }
-
-
-
-
-
 }
+.pagination{
+  text-align: center;
+  margin-bottom:30px;
+  ul{
+    display: inline-flex;
+    display: -webkit-inline-flex; /* Safari */
+    width: auto;
+    margin: 20px 0 30px 0;
+
+    li{
+      width: 40px;
+      height: 40px;
+      background-color: #b83f0a;
+      margin:5px;
+
+      a{
+        margin-top: 10px;
+        display: block;
+        height: 100%;
 
 
 
-
-
+      }
+    }
+  }
+}
 
 
 /*адаптация*/
 @media (max-width: 900px) {
   #logo {
-    display: none; }
+    display: none;
+  }
   #doRecord {
     width: 40%;
   }
-  .service-cart{
+  .service-cart {
     margin: 35px;
   }
 
-
 }
+
 @media (min-width: 1400px) {
   header menu ul li a {
     font-size: 20pt;
   }
-  footer menu ul li a{
+  footer menu ul li a {
     font-size: 15pt;
   }
 }

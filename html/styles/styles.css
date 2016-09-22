@@ -147,6 +147,25 @@ footer {
         color: #7F2906;
         font-weight: 400; }
 
+.pagination {
+  text-align: center;
+  margin-bottom: 30px; }
+  .pagination ul {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    /* Safari */
+    width: auto;
+    margin: 20px 0 30px 0; }
+    .pagination ul li {
+      width: 40px;
+      height: 40px;
+      background-color: #b83f0a;
+      margin: 5px; }
+      .pagination ul li a {
+        margin-top: 10px;
+        display: block;
+        height: 100%; }
+
 /*адаптация*/
 @media (max-width: 900px) {
   #logo {
