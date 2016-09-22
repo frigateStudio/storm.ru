@@ -22,7 +22,7 @@
     <script>
         $(window).on('load', function () {
             var $preLoader = $('#page-preLoader'),
-                    $spinner   = $preLoader.find('.spinner');
+                    $spinner = $preLoader.find('.spinner');
             $spinner.fadeOut();
             $preLoader.delay(350).fadeOut('slow');
 
@@ -36,20 +36,107 @@
 
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
-    <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    <a id="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
     <img id="logo" src="image/logo.png">
     <menu>
         <ul>
             <li><a href="index.html">ГЛАВНАЯ</a></li>
             <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="stock.html" class="active">АКЦИИ</a></li>
+            <li><a href="stock.html">АКЦИИ</a></li>
             <li><a href="#">ГАЛЕРЕЯ</a></li>
-            <li><a href="#">ОТЗЫВЫ</a></li>
+            <li><a href="#" class="active">ОТЗЫВЫ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
         </ul>
     </menu>
 </header>
 <main>
+    <div class="doReview">
+        <form>
+            <h3>Имя</h3>
+            <p>
+                <input type="text" id="name" title="name">
+            </p>
+            <h3>email</h3>
+            <p>
+                <input type="email" id="email" title="email">
+            </p>
+            <h3>Ваш отзыв</h3>
+            <p>
+                <textarea  id="review" title="review" ></textarea>
+            </p>
+            <p><button  id="button">Отправить</button></p>
+
+
+        </form>
+    </div>
+    <div class="reviews">
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias
+                nisi nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas
+                voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum n
+                ulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat
+                iconsectetur adipisicing elit.
+                Alias error, eveniet expedita fugiat iconsectetur adipisicing elit. Alias error, eveniet expedita fugiat
+                iure molestias nisi
+                nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas
+                voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum
+                nulla officia optio quia quis reprehenderit rerum sconsectetur adipisicing elit. Alias error, eveniet
+                expedita fugiat iconse
+                ctetur adipisicing elit. Alias error, eveniet expedita fugiat iconsectetur adipisicing elit. Alias
+                error, eveniet expedita fu
+                giat iconsectetur adipisicing elit. Alias error, eveniet expedita fugiat iaepe sapiente tenetur unde
+                voluptas voluptate.
+            </p>
+
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde
+                voluptas voluptate.
+            </p>
+        </div>
+    </div>
+
 
 </main>
 <footer>
@@ -57,9 +144,9 @@
         <ul>
             <li><a href="index.html">ГЛАВНАЯ</a></li>
             <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="stock.html" class="active">АКЦИИ</a></li>
+            <li><a href="stock.html">АКЦИИ</a></li>
             <li><a href="#">ГАЛЕРЕЯ</a></li>
-            <li><a href="#">ОТЗЫВЫ</a></li>
+            <li><a href="#" class="active">ОТЗЫВЫ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
             <li><a href="#">ВХОД</a></li>
         </ul>

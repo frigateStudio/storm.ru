@@ -64,7 +64,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 45px;
+  height: 46px;
   width: 100%;
   background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%); }
   footer menu {
@@ -165,6 +165,84 @@ footer {
         margin-top: 10px;
         display: block;
         height: 100%; }
+  .pagination .active {
+    background-color: maroon; }
+
+.reviews {
+  width: 80%;
+  margin: 20px auto; }
+  .reviews .review {
+    margin: 30px 0;
+    border: 1px solid gainsboro;
+    background-color: #f9f9f9; }
+    .reviews .review .review_header {
+      text-align: justify;
+      background-color: #b83f0a;
+      color: white;
+      padding: 10px 0;
+      font-family: "Poiret One", sans-serif; }
+      .reviews .review .review_header .review_name {
+        font-size: 19pt;
+        margin-left: 10px; }
+      .reviews .review .review_header .review_date {
+        float: right;
+        font-size: 14pt;
+        margin: 4px 10px; }
+    .reviews .review p {
+      padding: 20px 30px; }
+
+.doReview {
+  padding: 30px 0;
+  width: 100%;
+  background: url("../image/backReview.png") 100% 100% no-repeat black;
+  /* Добавляем фон */
+  background-attachment: fixed;
+  background-size: cover;
+  height: 540px;
+  text-align: center; }
+  .doReview form p {
+    padding: 0 0 20px 0; }
+  .doReview form input, .doReview form textarea {
+    padding: 5px 10px; }
+  .doReview h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 18pt; }
+  .doReview #name, .doReview #email, .doReview #review {
+    width: 40%;
+    font-size: 15pt;
+    opacity: 0.5; }
+  .doReview #name:focus, .doReview #email:focus, .doReview #review:focus {
+    opacity: 1;
+    outline: none; }
+  .doReview #name, .doReview #email {
+    height: 30px; }
+  .doReview #review {
+    height: 200px; }
+  .doReview #button {
+    height: 40px;
+    width: 20%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 25pt; }
+
+.fixed_doReview {
+  background-color: white;
+  width: 30%;
+  height: 50px;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  z-index: 10;
+  margin-left: -15%;
+  text-align: center;
+  border: 3px solid maroon; }
+  .fixed_doReview a {
+    display: block;
+    color: black;
+    height: 100%;
+    padding: 5px;
+    font-size: 20pt;
+    font-weight: 500; }
 
 /*адаптация*/
 @media (max-width: 900px) {

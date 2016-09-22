@@ -80,8 +80,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 45px;
-
+  height: 46px;
   width: 100%;
   background-image: $backGroundOrange;
   menu {
@@ -178,33 +177,136 @@ footer {
     }
   }
 }
-.pagination{
+.pagination {
   text-align: center;
-  margin-bottom:30px;
-  ul{
+  margin-bottom: 30px;
+
+  ul {
     display: inline-flex;
     display: -webkit-inline-flex; /* Safari */
     width: auto;
     margin: 20px 0 30px 0;
 
-    li{
+    li {
       width: 40px;
       height: 40px;
       background-color: #b83f0a;
-      margin:5px;
+      margin: 5px;
 
-      a{
+      a {
         margin-top: 10px;
         display: block;
         height: 100%;
 
-
-
       }
     }
   }
+  .active {
+    background-color: maroon;
+  }
 }
 
+.reviews{
+  width: 80%;
+  margin: 20px auto;
+  .review {
+    margin: 30px 0;
+    border: 1px solid gainsboro;
+    background-color: #f9f9f9;
+    .review_header {
+      text-align: justify;
+      background-color: #b83f0a;
+      color: white;
+      padding: 10px 0;
+      font-family: "Poiret One", sans-serif;
+
+      .review_name {
+        font-size: 19pt;
+        margin-left: 10px;
+      }
+      .review_date {
+        float: right;
+        font-size: 14pt;
+        margin: 4px 10px;
+      }
+    }
+    p {
+      padding: 20px 30px;
+    }
+  }
+
+}
+.doReview{
+  padding:30px 0;
+  width: 100%;
+  background: url("../image/backReview.png") 100% 100% no-repeat black; /* Добавляем фон */
+  background-attachment: fixed;
+  background-size: cover;
+  height: 540px;
+  text-align: center;
+  form{
+    p{
+      padding: 0 0 20px 0;
+    }
+    input,textarea{
+      padding: 5px 10px;
+    }
+
+  }
+  h3{
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    font-size: 18pt;
+  }
+  #name,#email,#review{
+    width: 40%;
+    font-size: 15pt;
+    opacity: 0.5;
+  }
+  #name:focus, #email:focus, #review:focus{
+    opacity: 1;
+    outline: none;
+  }
+  #name,#email{
+    height: 30px;
+  }
+  #review{
+
+    height: 200px;
+  }
+  #button{
+height: 40px;
+    width: 20%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 25pt;
+
+  }
+}
+
+.fixed_doReview{
+  background-color: white;
+  width: 30%;
+  height: 50px;
+  position: fixed;
+  left:50%;
+  bottom:10px;
+  z-index: 10;
+  margin-left:-15%;
+  text-align: center;
+  border: 3px solid maroon;
+
+
+  a{
+    display: block;
+    color:black;
+    height: 100%;
+    padding: 5px;
+    font-size: 20pt;
+font-weight: 500;
+
+  }
+
+}
 
 /*адаптация*/
 @media (max-width: 900px) {
