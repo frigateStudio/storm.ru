@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!--preLoader-->
     <style>
+
         #page-preLoader {
             position: fixed;
             left: 0;
@@ -50,6 +51,58 @@
     </menu>
 </header>
 <main>
+    <div class="containerDoReview">
+        <div class="reviewSlider">
+            <img src="image/buttons/prevArrow.svg" id="prevArrow">
+                <div class="bestReviews">
+                    <div class="bestReview">
+                        <p class="reviewText">
+                            Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                        </p>
+                        <p class="reviewDesc">
+                            Елена Летучая<br>
+                            26 октября 2016
+                        </p>
+
+                    </div>
+                    <div class="bestReview">
+                        <p class="reviewText">
+                                Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                                Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                        </p>
+                        <p class="reviewDesc">
+                            Елена Летучая<br>
+                            26 октября 2016
+                        </p>
+                    </div>
+                </div>
+            <img src="image/buttons/nextArrow.svg" id="nextArrow">
+            <a href="#" id="doReview">ОСТАВИТЬ ОТЗЫВ</a>
+        </div>
+
+
+        <div class="formReview">
+            <img src="image/buttons/close.svg" id="closeForm">
+            <form>
+                <span>Имя</span>
+                <p>
+                    <input type="text" id="name" title="name">
+                </p>
+                <span>email</span>
+                <p>
+                    <input type="email" id="email" title="email">
+                </p>
+                <span>Ваш отзыв</span>
+                <p>
+                    <textarea  id="review" title="review" ></textarea>
+                </p>
+                <p><button  id="button">Отправить</button></p>
+
+
+            </form>
+        </div>
+    </div>
+    <!--
     <div class="doReview">
         <form>
             <h3>Имя</h3>
@@ -137,7 +190,7 @@
         </div>
     </div>
 
-
+-->
 </main>
 <footer>
     <menu>
@@ -152,7 +205,61 @@
         </ul>
     </menu>
 </footer>
+<!--slider-->
 
+<link rel="stylesheet" type="text/css" href="slider/slick.css"/>
+<script type="text/javascript" src="slider/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var slider= $('.bestReviews');
+        slider.show();
+        slider.slick({
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrows:true,
+            pauseOnHover:true,
+            prevArrow:"#prevArrow",
+            nextArrow:"#nextArrow"
+        });
+        var container = $(".containerDoReview");
+        var divSlider =   $(".reviewSlider");
+        var form = $(".formReview");
+            $('#doReview').click(function(){
+                slider.hide();
+                slider.slick('unslick');
+                container.height(600);
+                divSlider.hide(300);
+                form.show(300);
+
+
+        });
+        $("#closeForm").click(function () {
+
+            form.hide(300);
+            divSlider.show(300);
+            container.height(500);
+            slider.show();
+            slider.slick({
+                autoplay:true,
+                autoplaySpeed:3000,
+                arrows:true,
+                pauseOnHover:true,
+                prevArrow:"#prevArrow",
+                nextArrow:"#nextArrow"
+            });
+
+
+
+        })
+
+
+
+
+
+
+    });
+</script>
+<!--end slider-->
 
 
 </body>

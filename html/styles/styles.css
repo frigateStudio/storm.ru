@@ -168,11 +168,49 @@ footer {
   .pagination .active {
     background-color: maroon; }
 
+/*Отзывы*/
+.containerDoReview {
+  background: url("../image/backRewiew2.jpg") 0 0 no-repeat;
+  /* Добавляем фон */
+  background-size: cover;
+  height: 450px;
+  overflow: hidden; }
+  .containerDoReview #prevArrow {
+    margin: 10% 0 10% 80px;
+    float: left;
+    cursor: pointer; }
+  .containerDoReview #nextArrow {
+    margin: 10% 0 10% 30px;
+    cursor: pointer; }
+  .containerDoReview #doReview {
+    text-align: center;
+    display: block;
+    width: 25%;
+    background-image: linear-gradient(270deg, #7F2906 0%, #EF550C 100%);
+    padding: 15px 20px;
+    margin-left: 195px;
+    position: absolute;
+    top: 530px; }
+  .containerDoReview .bestReviews {
+    display: none;
+    width: 500px;
+    float: left;
+    color: white;
+    margin: 70px 0 0 20px; }
+    .containerDoReview .bestReviews .bestReview .reviewText {
+      text-align: center;
+      font-size: 16pt;
+      padding-bottom: 20px; }
+    .containerDoReview .bestReviews .bestReview .reviewDesc {
+      text-align: center;
+      font-size: 14pt; }
+
 .reviews {
-  width: 80%;
-  margin: 20px auto; }
+  background: url("../image/backReview.png") 100% 100% no-repeat fixed black;
+  /* Добавляем фон */ }
   .reviews .review {
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 60%;
     border: 1px solid gainsboro;
     background-color: #f9f9f9; }
     .reviews .review .review_header {
@@ -191,58 +229,43 @@ footer {
     .reviews .review p {
       padding: 20px 30px; }
 
-.doReview {
-  padding: 30px 0;
-  width: 100%;
-  background: url("../image/backReview.png") 100% 100% no-repeat black;
-  /* Добавляем фон */
-  background-attachment: fixed;
-  background-size: cover;
-  height: 540px;
+.formReview {
+  display: none;
+  width: 50%;
+  margin: 40px 0 0 60px;
   text-align: center; }
-  .doReview form p {
-    padding: 0 0 20px 0; }
-  .doReview form input, .doReview form textarea {
-    padding: 5px 10px; }
-  .doReview h3 {
-    font-family: 'Open Sans', sans-serif;
+  .formReview span {
     color: white;
-    font-size: 18pt; }
-  .doReview #name, .doReview #email, .doReview #review {
-    width: 40%;
+    font-size: 15pt; }
+  .formReview form p {
+    padding: 0 0 20px 0; }
+  .formReview form input, .formReview form textarea {
+    padding: 5px 10px; }
+  .formReview #name, .formReview #email, .formReview #review {
+    width: 100%;
+    min-width: 500px;
     font-size: 15pt;
     opacity: 0.5; }
-  .doReview #name:focus, .doReview #email:focus, .doReview #review:focus {
+  .formReview #name:focus, .formReview #email:focus, .formReview #review:focus {
     opacity: 1;
     outline: none; }
-  .doReview #name, .doReview #email {
+  .formReview #name, .formReview #email {
     height: 30px; }
-  .doReview #review {
-    height: 200px; }
-  .doReview #button {
-    height: 40px;
-    width: 20%;
+  .formReview #review {
+    height: 150px; }
+  .formReview #button {
+    height: 44px;
+    width: 50%;
     font-family: "Poiret One", sans-serif;
     font-size: 25pt; }
-
-.fixed_doReview {
-  background-color: white;
-  width: 30%;
-  height: 50px;
-  position: fixed;
-  left: 50%;
-  bottom: 10px;
-  z-index: 10;
-  margin-left: -15%;
-  text-align: center;
-  border: 3px solid maroon; }
-  .fixed_doReview a {
-    display: block;
-    color: black;
-    height: 100%;
-    padding: 5px;
-    font-size: 20pt;
-    font-weight: 500; }
+  .formReview #closeForm {
+    position: absolute;
+    left: 10px;
+    margin-top: -20px;
+    cursor: pointer;
+    opacity: 0.5; }
+  .formReview #closeForm:hover {
+    opacity: 1; }
 
 /*адаптация*/
 @media (max-width: 900px) {
