@@ -112,8 +112,10 @@ footer {
     font-size: 15pt;
     font-style: normal; }
 
+/*акции*/
 .stock {
   width: 80%;
+  padding-top: 5px;
   margin: 0 auto;
   overflow: hidden;
   display: -webkit-flex;
@@ -124,25 +126,18 @@ footer {
   flex-wrap: wrap; }
   .stock .cart_stock {
     text-align: center;
-    height: 400px;
-    width: 300px;
-    background-color: #ddd;
-    margin: 10px auto; }
-    .stock .cart_stock h3 {
-      background-color: #b83f0a;
-      color: white;
-      padding: 10px 0;
-      font-family: "Poiret One", sans-serif;
-      font-size: 17pt; }
+    width: 500px;
+    background-color: #eee;
+    margin: 5px; }
     .stock .cart_stock img {
-      width: 300px;
-      height: 200px; }
+      width: 500px;
+      height: 300px; }
     .stock .cart_stock p {
       padding: 10px 20px;
       text-align: justify; }
     .stock .cart_stock .more {
       text-align: right;
-      margin: -10px 10px 10px 0; }
+      margin: -20px 10px 10px 0; }
       .stock .cart_stock .more a {
         color: #7F2906;
         font-weight: 400; }
@@ -172,7 +167,7 @@ footer {
 
 /*Отзывы*/
 .containerDoReview {
-  background: url("../image/backRewiew2.jpg") 0 0 no-repeat;
+  background: url("../image/backReview2.jpg") 0 0 no-repeat;
   /* Добавляем фон */
   background-size: cover;
   height: 450px;
