@@ -191,7 +191,7 @@ footer {
     li {
       width: 40px;
       height: 40px;
-      background-color: #b83f0a;
+      background-color: gray;
       margin: 5px;
 
       a {
@@ -201,9 +201,12 @@ footer {
 
       }
     }
+    li:not(.active):hover{
+      background-color: #bbb;
+    }
   }
   .active {
-    background-color: maroon;
+    background-color: #b83f0a;
   }
 }
 /*Отзывы*/
@@ -254,7 +257,8 @@ footer {
 }
 
 .reviews{
-  background: url("../image/backReview.png") 100% 100% no-repeat fixed black; /* Добавляем фон */
+  background-color: #eee;
+  overflow: hidden;
   .review {
     margin: 30px auto;
     width: 60%;

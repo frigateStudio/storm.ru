@@ -102,26 +102,7 @@
             </form>
         </div>
     </div>
-    <!--
-    <div class="doReview">
-        <form>
-            <h3>Имя</h3>
-            <p>
-                <input type="text" id="name" title="name">
-            </p>
-            <h3>email</h3>
-            <p>
-                <input type="email" id="email" title="email">
-            </p>
-            <h3>Ваш отзыв</h3>
-            <p>
-                <textarea  id="review" title="review" ></textarea>
-            </p>
-            <p><button  id="button">Отправить</button></p>
 
-
-        </form>
-    </div>
     <div class="reviews">
         <div class="review">
             <div class="review_header">
@@ -188,9 +169,21 @@
                 voluptas voluptate.
             </p>
         </div>
+        <div class="pagination">
+            <ul>
+                <li><a href="#">1</a> </li>
+                <li><a href="#">2</a> </li>
+                <li class="active"><a href="#">3</a> </li>
+                <li><a href="#">4</a> </li>
+                <li><a href="#">5</a> </li>
+                <li><a href="#">6</a> </li>
+                <li><a href="#">→</a> </li>
+            </ul>
+        </div>
     </div>
 
--->
+
+
 </main>
 <footer>
     <menu>
@@ -227,6 +220,7 @@
             $('#doReview').click(function(){
                 slider.hide();
                 slider.slick('unslick');
+                container.height(600);
                 container.height(600);
                 divSlider.hide(300);
                 form.show(300);

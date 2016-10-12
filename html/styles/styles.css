@@ -159,14 +159,16 @@ footer {
     .pagination ul li {
       width: 40px;
       height: 40px;
-      background-color: #b83f0a;
+      background-color: gray;
       margin: 5px; }
       .pagination ul li a {
         margin-top: 10px;
         display: block;
         height: 100%; }
+    .pagination ul li:not(.active):hover {
+      background-color: #bbb; }
   .pagination .active {
-    background-color: maroon; }
+    background-color: #b83f0a; }
 
 /*Отзывы*/
 .containerDoReview {
@@ -206,8 +208,8 @@ footer {
       font-size: 14pt; }
 
 .reviews {
-  background: url("../image/backReview.png") 100% 100% no-repeat fixed black;
-  /* Добавляем фон */ }
+  background-color: #eee;
+  overflow: hidden; }
   .reviews .review {
     margin: 30px auto;
     width: 60%;
