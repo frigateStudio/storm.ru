@@ -113,6 +113,9 @@ footer {
     font-style: normal; }
 
 /*акции*/
+.wrapperStock {
+  background-color: #eee; }
+
 .stock {
   width: 80%;
   padding-top: 5px;
@@ -127,8 +130,8 @@ footer {
   .stock .cart_stock {
     text-align: center;
     width: 500px;
-    background-color: #eee;
-    margin: 5px; }
+    margin: 5px;
+    background-color: white; }
     .stock .cart_stock img {
       width: 500px;
       height: 300px; }
@@ -167,7 +170,7 @@ footer {
 
 /*Отзывы*/
 .containerDoReview {
-  background: url("../image/backReview2.jpg") 0 0 no-repeat;
+  background: url("../image/backgrounds/backReview2.jpg") 0 0 no-repeat;
   /* Добавляем фон */
   background-size: cover;
   height: 450px;
@@ -203,8 +206,8 @@ footer {
       font-size: 14pt; }
 
 .reviews {
-  background-color: #eee;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #eee; }
   .reviews .review {
     margin: 30px auto;
     width: 60%;
@@ -263,6 +266,111 @@ footer {
     opacity: 0.5; }
   .formReview #closeForm:hover {
     opacity: 1; }
+
+/*альбом*/
+.albumNav {
+  width: 90%;
+  padding-bottom: 10px; }
+  .albumNav img {
+    height: 100px;
+    margin: 5px; }
+
+#prevArrowNav {
+  float: left;
+  margin: 40px 20px 0 20px;
+  cursor: pointer; }
+
+#nextArrowNav {
+  float: right;
+  margin: -80px 20px 0 20px;
+  cursor: pointer; }
+
+.album img {
+  height: 500px;
+  margin-bottom: 5px;
+  margin-top: 10px; }
+
+.backToAlbums {
+  background-color: #b83f0a;
+  margin: 0 auto 60px auto;
+  display: block;
+  padding: 15px 20px;
+  width: 200px;
+  text-align: center; }
+
+/*контакты*/
+.containerContacts {
+  height: 600px;
+  background: url("../image/backgrounds/backContacts.png") 0 0 no-repeat;
+  /* Добавляем фон */
+  background-size: cover;
+  overflow: hidden; }
+  .containerContacts .contacts {
+    position: absolute;
+    left: 0;
+    margin: 30px 0 0 110px; }
+    .containerContacts .contacts address {
+      font-style: normal;
+      text-align: center;
+      font-size: 20pt; }
+    .containerContacts .contacts .phone {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 24pt; }
+      .containerContacts .contacts .phone a {
+        color: black;
+        font-weight: 500; }
+    .containerContacts .contacts .workTime {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 17pt;
+      font-weight: 500; }
+      .containerContacts .contacts .workTime p {
+        font-size: 15pt;
+        font-weight: 100; }
+  .containerContacts .feedback {
+    font-size: 15pt; }
+    .containerContacts .feedback form {
+      text-align: center; }
+      .containerContacts .feedback form #name, .containerContacts .feedback form #email {
+        width: 400px;
+        height: 30px;
+        font-size: 15pt;
+        text-align: center; }
+      .containerContacts .feedback form #question {
+        width: 400px;
+        height: 100px;
+        border: 1px solid #ccc;
+        font-size: 10pt; }
+      .containerContacts .feedback form #button {
+        height: 30px;
+        width: 200px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14pt; }
+
+/*Услуги*/
+.containerServices {
+  overflow: hidden;
+  min-height: 100vh;
+  background: url("../image/backgrounds/backService.jpg") 0 0 fixed no-repeat black;
+  /* Добавляем фон */
+  background-size: cover; }
+  .containerServices .service {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    margin: 20px 10px 10px 120px;
+    text-align: center; }
+    .containerServices .service .headerService {
+      color: #b83f0a;
+      background-color: white;
+      height: 30px;
+      font-size: 15pt;
+      font-weight: 400; }
+    .containerServices .service ul li {
+      border-bottom: 1px solid white;
+      min-height: 40px;
+      margin-top: 15px;
+      font-weight: 400; }
 
 /*адаптация*/
 @media (max-width: 900px) {

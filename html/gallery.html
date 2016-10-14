@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Орхидея</title>
+    <link href="styles/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('image/backgrounds/backLoad.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner   = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+            $preLoader.delay(350).fadeOut('slow');
+
+        });
+    </script>
+    <!--endPreLoader-->
+</head>
+
+<body>
+<div id="page-preLoader"></div>
+
+<header>
+    <address>г. Лысково, ул. Мичурина д.56</address>
+    <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    <img id="logo" src="image/logo.png">
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="#">УСЛУГИ</a></li>
+            <li><a href="stock.html" class="active">АКЦИИ</a></li>
+            <li><a href="#">ГАЛЕРЕЯ</a></li>
+            <li><a href="#">ОТЗЫВЫ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+        </ul>
+    </menu>
+</header>
+<main>
+    <div class="albums">
+        <div id="service-carts-container">
+
+            <div class="service-cart">
+                <a href="album.html">
+                    <p>САЛОН</p>
+                    <img src="http://dummyimage.com/295x280/329456"/>
+                </a>
+            </div>
+            <div class="service-cart">
+                <a href="album.html">
+                    <p>СТРИЖКИ</p>
+                    <img src="http://dummyimage.com/295x280/329456"/>
+                </a>
+            </div>
+            <div class="service-cart">
+                <a href="album.html">
+                    <p>МАНИКЮР</p>
+                    <img src="http://dummyimage.com/295x280/329456"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="#">УСЛУГИ</a></li>
+            <li><a href="stock.html" class="active">АКЦИИ</a></li>
+            <li><a href="#">ГАЛЕРЕЯ</a></li>
+            <li><a href="#">ОТЗЫВЫ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+            <li><a href="#">ВХОД</a></li>
+        </ul>
+    </menu>
+</footer>
+
+
+
+</body>
+</html>

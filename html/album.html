@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Орхидея</title>
+    <link href="styles/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('image/backgrounds/backLoad.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner   = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+            $preLoader.delay(350).fadeOut('slow');
+
+        });
+    </script>
+    <!--endPreLoader-->
+</head>
+
+<body style="background-color: #eee">
+<div id="page-preLoader"></div>
+
+<header>
+    <address>г. Лысково, ул. Мичурина д.56</address>
+    <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    <img id="logo" src="image/logo.png">
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html" class="active">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+    </menu>
+</header>
+<main>
+
+<div class="album">
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1200x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1500x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1500x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1500x700/32b056"/>
+    </div>
+    <div>
+        <img src="http://dummyimage.com/1000x700/32b056"/>
+    </div>
+
+</div>
+    <img src="image/buttons/prevArrowOrange.svg" id="prevArrowNav">
+    <div class="albumNav">
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1200x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1500x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1500x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1500x700/32b056"/>
+        </div>
+        <div>
+            <img src="http://dummyimage.com/1000x700/32b056"/>
+        </div>
+
+    </div>
+    <img src="image/buttons/nextArrowOrange.svg" id="nextArrowNav">
+    <a href="gallery.html" class="backToAlbums">Назад к альбомам</a>
+</main>
+<footer>
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html" class="active">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
+            <li><a href="#">ВХОД</a></li>
+        </ul>
+    </menu>
+</footer>
+<link rel="stylesheet" type="text/css" href="slider/slick.css"/>
+<script type="text/javascript" src="slider/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.album').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.albumNav'
+        });
+        $('.albumNav').slick({
+            asNavFor: '.album',
+            centerMode: true,
+            centerPadding: '70px',
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            focusOnSelect: true,
+            variableWidth: true,
+            prevArrow:"#prevArrowNav",
+            nextArrow:"#nextArrowNav"
+
+
+        });
+
+
+
+        });
+</script>
+
+
+
+</body>
+</html>

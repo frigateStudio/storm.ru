@@ -15,7 +15,7 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: #7F2906 url('image/back.svg') center no-repeat;
+            background: #7F2906 url('image/backgrounds/backLoad.svg') center no-repeat;
             z-index: 100;
         }
     </style>
@@ -41,27 +41,67 @@
     <menu>
         <ul>
             <li><a href="index.html">ГЛАВНАЯ</a></li>
-            <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="stock.html" class="active">АКЦИИ</a></li>
-            <li><a href="#">ГАЛЕРЕЯ</a></li>
-            <li><a href="#">ОТЗЫВЫ</a></li>
-            <li><a href="#">КОНТАКТЫ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html" class="active">КОНТАКТЫ</a></li>
         </ul>
     </menu>
 </header>
 <main>
+    <div class="containerContacts">
+<div class="contacts">
+
+    <address>г. Лысково, ул. Мичурина д.56</address>
+<p class="phone">
+    <a  href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a><br>
+    <a  href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    </p>
+    <div class="workTime">
+        Режим работы
+        <p>
+            ПН-ПТ: 8:00-20:00<br>
+            СБ-ВС: 8:00-18:00
+        </p>
+    </div>
+    <div class="feedback">
+        <form>
+            <span>Имя</span>
+            <p>
+                <input type="text" id="name" title="name">
+            </p>
+            <span>email</span>
+            <p>
+                <input type="email" id="email" title="email">
+            </p>
+            <span>Ваш вопрос</span>
+            <p>
+                <textarea  id="question" title="question" ></textarea>
+            </p>
+            <p><button  id="button">Отправить</button></p>
+
+
+        </form>
+    </div>
+</div>
+
+
+
+    </div>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+
 
 </main>
 <footer>
     <menu>
         <ul>
             <li><a href="index.html">ГЛАВНАЯ</a></li>
-            <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="stock.html" class="active">АКЦИИ</a></li>
-            <li><a href="#">ГАЛЕРЕЯ</a></li>
-            <li><a href="#">ОТЗЫВЫ</a></li>
-            <li><a href="#">КОНТАКТЫ</a></li>
-            <li><a href="#">ВХОД</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html" class="active">КОНТАКТЫ</a></li>
         </ul>
     </menu>
 </footer>

@@ -138,6 +138,9 @@ footer {
   }
 }
 /*акции*/
+.wrapperStock{
+  background-color: #eee;
+}
 .stock {
   width: 80%;
   padding-top: 5px;
@@ -150,8 +153,8 @@ footer {
   .cart_stock {
     text-align: center;
     width: 500px;
-    background-color: #eee;
     margin: 5px;
+    background-color: white;
 
     img {
       width: 500px;
@@ -205,7 +208,7 @@ footer {
 }
 /*Отзывы*/
 .containerDoReview{
-  background: url("../image/backReview2.jpg") 0 0 no-repeat; /* Добавляем фон */
+  background: url("../image/backgrounds/backReview2.jpg") 0 0 no-repeat; /* Добавляем фон */
   background-size: cover;
   height: 450px;
   overflow: hidden;
@@ -251,8 +254,8 @@ footer {
 }
 
 .reviews{
-  background-color: #eee;
   overflow: hidden;
+  background-color: #eee;
   .review {
     margin: 30px auto;
     width: 60%;
@@ -305,7 +308,7 @@ footer {
     min-width: 500px;
     font-size: 15pt;
     opacity: 0.5;
-   
+
   }
   #name:focus, #email:focus, #review:focus{
     opacity: 1;
@@ -335,8 +338,143 @@ footer {
   }
 
 }
+/*альбом*/
+.albumNav{
+  width: 90%;
+  padding-bottom: 10px;
+  img{
+  height: 100px;
+    margin: 5px;
+  }
+}
+#prevArrowNav{
+  float:left;
+  margin:40px 20px 0 20px;
+  cursor: pointer;
+
+}
+#nextArrowNav{
+  float:right;
+  margin:-80px 20px 0 20px;
+  cursor: pointer;
+}
+.album{
+  img{
+    height: 500px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+}
+.backToAlbums{
+  background-color:#b83f0a;
+  margin:0 auto 60px auto;
+  display: block;
+  padding: 15px 20px;
+  width: 200px;
+  text-align: center;
 
 
+}
+/*контакты*/
+.containerContacts{
+  height: 600px;
+  background: url("../image/backgrounds/backContacts.png") 0 0  no-repeat; /* Добавляем фон */
+  background-size: cover;
+  overflow: hidden;
+
+  .contacts{
+    position: absolute;
+    left: 0;
+    margin: 30px 0 0 110px;
+    address{
+      font-style: normal;
+      text-align: center;
+      font-size: 20pt;
+    }
+    .phone{
+      margin-top: 30px;
+
+      text-align: center;
+      font-size:24pt;
+      a{
+        color: black;
+        font-weight: 500;
+      }
+    }
+    .workTime{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 17pt;
+      font-weight: 500;
+      p{
+        font-size: 15pt;
+        font-weight: 100;
+      }
+
+    }
+  }
+.feedback{
+
+
+  font-size: 15pt;
+  form{
+    text-align: center;
+    #name,#email{
+      width: 400px;
+      height: 30px;
+      font-size: 15pt;
+      text-align: center;
+
+
+    }
+    #question{
+      width: 400px;
+      height: 100px;
+      border: 1px solid #ccc;
+      font-size: 10pt;
+    }
+    #button{
+      height: 30px;
+      width: 200px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14pt;
+
+    }
+  }
+}
+}
+/*Услуги*/
+.containerServices {
+  overflow: hidden;
+  min-height: 100vh;
+  background: url("../image/backgrounds/backService.jpg") 0 0 fixed no-repeat black; /* Добавляем фон */
+  background-size: cover;
+  .service {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    margin: 20px 10px 10px 120px;
+    text-align: center;
+    .headerService{
+      color:#b83f0a;
+      background-color:white;
+      height: 30px;
+      font-size: 15pt;
+      font-weight: 400;
+    }
+  ul{
+    li{
+      border-bottom: 1px solid white;
+      min-height:40px;
+      margin-top:15px;
+      font-weight: 400;
+    }
+  }
+
+
+    }
+
+
+}
 /*адаптация*/
 @media (max-width: 900px) {
   #logo {
