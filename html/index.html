@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Орхидея</title>
+    <link href="styles/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('image/backgrounds/backLoad.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner   = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+           $preLoader.delay(350).fadeOut('slow');
+
+        });
+    </script>
+  </head>
+<!--endPreLoader-->
+<body>
+<div id="page-preLoader"></div>
+<header>
+    <address>г. Лысково, ул. Мичурина д.56</address>
+    <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    <img id="logo" src="image/logo.png">
+    <menu>
+        <ul>
+            <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+    </menu>
+</header>
+
+<main>
+
+   <div class="slider">
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/329456">
+
+
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/423456">
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/399096" >
+
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/320300"></div>
+    </div>
+
+
+    
+    <a href="#" id="doRecord">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+    
+    <div id="service-carts-container">
+
+        <div class="service-cart">
+            <p>СТРИЖКИ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>ПРИЧЕСКИ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>МАНИКЮР</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>СОЛЯРИЙ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+    </div>
+    <!--YandexMaps-->
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+
+</main>
+
+
+
+    <footer>
+        <menu>
+            <ul>
+                <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
+                <li><a href="services.html">УСЛУГИ</a></li>
+                <li><a href="stock.html" >АКЦИИ</a></li>
+                <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+                <li><a href="review.html">ОТЗЫВЫ</a></li>
+                <li><a href="contacts.html">КОНТАКТЫ</a></li>
+            </ul>
+        </menu>
+    </footer>
+
+
+
+<!--slider-->
+<link rel="stylesheet" type="text/css" href="slider/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slider/slick-theme.css"/>
+<script type="text/javascript" src="slider/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+       var slider= $('.slider');
+        slider.show();
+        slider.slick({
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrows:false,
+            pauseOnHover:false,
+            dots:true,
+            pauseOnDotsHover:true,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+
+                        dots: false
+                    }
+                }
+
+            ]
+        });
+
+    });
+</script>
+<!--end slider-->
+
+
+
+</body>
+</html>
