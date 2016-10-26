@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Орхидея</title>
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="../template/styles/styles.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -16,7 +16,7 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: #7F2906 url('image/backgrounds/backLoad.svg') center no-repeat;
+            background: #7F2906 url('../template/img/backgrounds/backLoad.svg') center no-repeat;
             z-index: 100;
         }
     </style>
@@ -38,7 +38,7 @@
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
     <a id="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
-    <img id="logo" src="image/logo.png">
+    <img id="logo" src="../template/img/logo.png">
     <menu>
         <ul>
             <li><a href="index.html">ГЛАВНАЯ</a></li>
@@ -53,7 +53,7 @@
 <main>
     <div class="containerDoReview">
         <div class="reviewSlider">
-            <img src="image/buttons/prevArrow.svg" id="prevArrow">
+            <img src="../template/img/buttons/prevArrow.svg" id="prevArrow">
                 <div class="bestReviews">
                     <div class="bestReview">
                         <p class="reviewText">
@@ -76,13 +76,13 @@
                         </p>
                     </div>
                 </div>
-            <img src="image/buttons/nextArrow.svg" id="nextArrow">
+            <img src="../template/img/buttons/nextArrow.svg" id="nextArrow">
             <a href="#" id="doReview">ОСТАВИТЬ ОТЗЫВ</a>
         </div>
 
 
         <div class="formReview">
-            <img src="image/buttons/close.svg" id="closeForm">
+            <img src="../template/img/buttons/close.svg" id="closeForm">
             <form>
                 <span>Имя</span>
                 <p>
@@ -199,8 +199,8 @@
 </footer>
 <!--slider-->
 
-<link rel="stylesheet" type="text/css" href="slider/slick.css"/>
-<script type="text/javascript" src="slider/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/slider/slick.css"/>
+<script type="text/javascript" src="../template/slider/slick.min.js"></script>
 <script>
     $(document).ready(function() {
         var slider= $('.bestReviews');

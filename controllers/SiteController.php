@@ -16,8 +16,12 @@ class SiteController{
 
     public function actionIndex()
     {
-        $masters=Master::getMasterList();        
+        //номер активного пункта меню
+        $idActiveMenu = 4;        
         require_once(ROOT . '/views/index.php');
+        
+        
+        
         return true;
     }
         
