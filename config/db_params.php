@@ -1,8 +1,8 @@
 <?php
 
 return array(
-			'host' => 'localhost',
-			'dbname' => 'storm',
-			'user' => 'root',
-			'password' => 'root',
+			'host' => '95.213.203.251',
+			'dbname' => 'orchid',
+			'user' => 'jack',
+			'password' => 'vorobei',
 );
