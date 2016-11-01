@@ -1,4 +1,4 @@
-<?
+<?php
 include ROOT.'/views/layouts/header.php';
 ?>
 <main>
@@ -7,13 +7,13 @@ include ROOT.'/views/layouts/header.php';
 
             <div>
                 <div class="slideText">
-                    <h3><? echo $slide['header']; ?></h3>
-                    <p><? echo $slide['content']; ?></p>
+                    <h3><?php echo $slide['header']; ?></h3>
+                    <p><?php echo $slide['content']; ?></p>
                 </div>
-                <img src="<? echo $slide['url_image']?>">
+                <img src="<?php echo $slide['url_image']?>">
             </div>
 
-        <? endforeach;?>
+        <?php endforeach;?>
     </div>
 
 
@@ -44,7 +44,7 @@ include ROOT.'/views/layouts/header.php';
 
 </main>
 <!--подключение футера -->
-<?
+<?php
     include ROOT.'/views/layouts/footer.php';
 ?>
 
@@ -56,7 +56,7 @@ include ROOT.'/views/layouts/header.php';
 <!--Добавление класса active для активного пункта меню-->
 <script>
     $(document).ready(function() {
-        $('.ulMenu-<?echo $idActiveMenu?>').addClass('active');
+        $('.ulMenu-<?php echo $idActiveMenu;?>').addClass('active');
     });
 </script>
 
@@ -65,3 +65,4 @@ include ROOT.'/views/layouts/header.php';
 
 </body>
 </html>
+
