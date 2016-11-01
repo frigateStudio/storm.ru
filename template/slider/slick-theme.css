@@ -4,7 +4,7 @@
     display: none;
 }
 
-.slide_desc{
+.slideText {
     width: 400px;
     margin: 30px 50px;
     padding: 40px 20px;
@@ -13,12 +13,12 @@
     z-index: 200;
     color:white;
 }
-.slide_desc h3{
+.slideText h3{
     font-family: "Poiret One", sans-serif;
     font-size: 30pt;
     font-weight: 100;
 }
-.slide_desc p{
+.slideText p{
     font-size: 15pt;
 }
 .slider img {
@@ -26,7 +26,7 @@
     opacity: 0.3;
 }
 @media (max-width: 900px) {
-    .slide_desc{
+    .slideText {
         width: 300px;
         border: none;
         margin: 0 4.6%;
