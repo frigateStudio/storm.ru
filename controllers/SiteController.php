@@ -17,11 +17,12 @@ class SiteController{
     public function actionIndex()
     {
         //номер активного пункта меню
-        $idActiveMenu = 4;        
+        //0 - нет активного пункта меню
+        $idActiveMenu = 1;
+        
+        
+        
         require_once(ROOT . '/views/index.php');
-        
-        
-        
         return true;
     }
         

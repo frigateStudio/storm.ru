@@ -63,38 +63,20 @@ include ROOT.'/views/layouts/header.php';
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
 
 </main>
+<!--подключение футера -->
 <?
-include ROOT.'/views/layouts/footer.php';
+    include ROOT.'/views/layouts/footer.php';
 ?>
 
-<!--slider-->
-<link rel="stylesheet" type="text/css" href="../../template/slider/slick.css"/>
-<link rel="stylesheet" type="text/css" href="../../template/slider/slick-theme.css"/>
-<script type="text/javascript" src="../../template/slider/slick.min.js"></script>
+<!--Для слайдера-->
+<link rel="stylesheet" type="text/css" href="../template/slider/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../template/slider/slick-theme.css"/>
+<script type="text/javascript" src="../template/slider/slick.min.js"></script>
+<script type="text/javascript" src="../template/js/sliderIndex.js"></script>
+<!--Добавление класса active для активного пункта меню-->
 <script>
     $(document).ready(function() {
-        var slider= $('.slider');
-        slider.show();
-        slider.slick({
-            autoplay:true,
-            autoplaySpeed:3000,
-            arrows:false,
-            pauseOnHover:false,
-            dots:true,
-            pauseOnDotsHover:true,
-            responsive: [
-                {
-                    breakpoint: 900,
-                    settings: {
-
-                        dots: false
-                    }
-                }
-
-            ]
-        });
         $('.ulMenu-<?echo $idActiveMenu?>').addClass('active');
-
     });
 
 
@@ -102,7 +84,7 @@ include ROOT.'/views/layouts/footer.php';
 
 
 </script>
-<!--end slider-->
+
 
 
 
