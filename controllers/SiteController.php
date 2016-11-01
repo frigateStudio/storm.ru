@@ -19,8 +19,7 @@ class SiteController{
         //номер активного пункта меню
         //0 - нет активного пункта меню
         $idActiveMenu = 1;
-        
-        
+        $slides = Slider::getResourcesSlider();        
         
         require_once(ROOT . '/views/index.php');
         return true;
