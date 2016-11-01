@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Орхидея</title>
+    <link href="../template/styles/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('../template/img/backgrounds/backLoad.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+            $preLoader.delay(350).fadeOut('slow');
+
+        });
+    </script>
+    <!--endPreLoader-->
+</head>
+
+<body>
+<div id="page-preLoader"></div>
+
+<header>
+    <address>г. Лысково, ул. Мичурина д.56</address>
+    <a id="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
+    <img id="logo" src="../template/img/logo.png">
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html" class="active">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+    </menu>
+</header>
+<main>
+    <div class="containerDoReview">
+        <div class="reviewSlider">
+            <img src="../template/img/buttons/prevArrow.svg" id="prevArrow">
+                <div class="bestReviews">
+                    <div class="bestReview">
+                        <p class="reviewText">
+                            Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                        </p>
+                        <p class="reviewDesc">
+                            Елена Летучая<br>
+                            26 октября 2016
+                        </p>
+
+                    </div>
+                    <div class="bestReview">
+                        <p class="reviewText">
+                                Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                                Идеальный сервис и лучшее обслуживание, такого я еще не видела, все просто отлично, спасибо!
+                        </p>
+                        <p class="reviewDesc">
+                            Елена Летучая<br>
+                            26 октября 2016
+                        </p>
+                    </div>
+                </div>
+            <img src="../template/img/buttons/nextArrow.svg" id="nextArrow">
+            <a href="#" id="doReview">ОСТАВИТЬ ОТЗЫВ</a>
+        </div>
+
+
+        <div class="formReview">
+            <img src="../template/img/buttons/close.svg" id="closeForm">
+            <form>
+                <span>Имя</span>
+                <p>
+                    <input type="text" id="name" title="name">
+                </p>
+                <span>email</span>
+                <p>
+                    <input type="email" id="email" title="email">
+                </p>
+                <span>Ваш отзыв</span>
+                <p>
+                    <textarea  id="review" title="review" ></textarea>
+                </p>
+                <p><button  id="button">Отправить</button></p>
+
+
+            </form>
+        </div>
+    </div>
+
+    <div class="reviews" id="anchorReview">
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias
+                nisi nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas
+                voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum n
+                ulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat
+                iconsectetur adipisicing elit.
+                Alias error, eveniet expedita fugiat iconsectetur adipisicing elit. Alias error, eveniet expedita fugiat
+                iure molestias nisi
+                nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde voluptas
+                voluptate.
+            </p>
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum
+                nulla officia optio quia quis reprehenderit rerum sconsectetur adipisicing elit. Alias error, eveniet
+                expedita fugiat iconse
+                ctetur adipisicing elit. Alias error, eveniet expedita fugiat iconsectetur adipisicing elit. Alias
+                error, eveniet expedita fu
+                giat iconsectetur adipisicing elit. Alias error, eveniet expedita fugiat iaepe sapiente tenetur unde
+                voluptas voluptate.
+            </p>
+
+        </div>
+        <div class="review">
+            <div class="review_header">
+                <span class="review_name">Михаил Марнавин</span>
+                <span class="review_date">12.12.2012</span>
+            </div>
+            <p class="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error, eveniet expedita fugiat iure
+                molestias nisi nostrum nulla officia optio quia quis reprehenderit rerum saepe sapiente tenetur unde
+                voluptas voluptate.
+            </p>
+        </div>
+        <div class="pagination">
+            <ul>
+                <li><a href="#anchorReview">1</a> </li>
+                <li><a href="#">2</a> </li>
+                <li class="active"><a href="#">3</a> </li>
+                <li><a href="#">4</a> </li>
+                <li><a href="#">5</a> </li>
+                <li><a href="#">6</a> </li>
+                <li><a href="#">→</a> </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</main>
+<footer>
+    <menu>
+        <ul>
+            <li><a href="index.html">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html" class="active">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+    </menu>
+</footer>
+<!--slider-->
+
+<link rel="stylesheet" type="text/css" href="../template/slider/slick.css"/>
+<script type="text/javascript" src="../template/slider/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var slider= $('.bestReviews');
+        slider.show();
+        slider.slick({
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrows:true,
+            pauseOnHover:true,
+            prevArrow:"#prevArrow",
+            nextArrow:"#nextArrow"
+        });
+        var container = $(".containerDoReview");
+        var divSlider =   $(".reviewSlider");
+        var form = $(".formReview");
+            $('#doReview').click(function(){
+                slider.hide();
+                slider.slick('unslick');
+                container.height(600);
+                container.height(600);
+                divSlider.hide(300);
+                form.show(300);
+
+
+        });
+        $("#closeForm").click(function () {
+
+            form.hide(300);
+            divSlider.show(300);
+            container.height(500);
+            slider.show();
+            slider.slick({
+                autoplay:true,
+                autoplaySpeed:3000,
+                arrows:true,
+                pauseOnHover:true,
+                prevArrow:"#prevArrow",
+                nextArrow:"#nextArrow"
+            });
+
+
+
+        })
+
+
+
+
+
+
+    });
+</script>
+<!--end slider-->
+
+
+</body>
+</html>

@@ -3,38 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Орхидея</title>
-    <link href="styles/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
-    <!-- jQuery library (served from Google) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="responsiveslides.js"></script>
+    <link href="html/styles/styles.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--preLoader-->
+    <style>
+        #page-preLoader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #7F2906 url('../template/img/backgrounds/backLoad.svg') center no-repeat;
+            z-index: 100;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            var $preLoader = $('#page-preLoader'),
+                    $spinner   = $preLoader.find('.spinner');
+            $spinner.fadeOut();
+           $preLoader.delay(350).fadeOut('slow');
 
-
-</head>
+        });
+    </script>
+  </head>
+<!--endPreLoader-->
 <body>
-<div class="wrapper">
+<div id="page-preLoader"></div>
 <header>
     <address>г. Лысково, ул. Мичурина д.56</address>
     <a id ="phone" href="tel:+7 (912) 052 44 07">+7 (912) 052 44 07</a>
-    <image id="logo" src="image/logo.png"></image>
+    <img id="logo" src="../template/img/logo.png">
     <menu>
         <ul>
-            <li><a href="#">УСЛУГИ</a></li>
-            <li><a href="#">АКЦИИ</a></li>
-            <li><a href="#">ГАЛЕРЕЯ</a></li>
-            <li><a href="#">ОТЗЫВЫ</a></li>
-            <li><a href="#">КОНТАКТЫ</a></li>
+            <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
+            <li><a href="services.html">УСЛУГИ</a></li>
+            <li><a href="stock.html" >АКЦИИ</a></li>
+            <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+            <li><a href="review.html">ОТЗЫВЫ</a></li>
+            <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
     </menu>
 </header>
 
 <main>
 
-    <ul class="rslides">
-        <li>
+   <div class="slider">
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/329456">
 
+
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/423456">
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/399096" >
+
+       </div>
+       <div>
+           <div class="slide_desc">
+               <h3>ЗАГОЛОВОК</h3>
+               <p>Текст акции или предложения с 50% скидкой!</p>
+           </div>
+           <img src="http://dummyimage.com/1500x500/320300"></div>
+    </div>
+
+
+    
+    <a href="#" id="doRecord">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+    
+    <div id="service-carts-container">
+
+<<<<<<< HEAD
             <div class="slide" style="background-image: url(image/1.jpg);">
                 <h1>Текст слайда</h1>
                 <img src="image/1.jpg" alt="">
@@ -43,6 +98,27 @@
         <li><img src="image/2.jpg" alt=""></li>
         <li><img src="image/3.jpg" alt=""></li>
     </ul>
+=======
+        <div class="service-cart">
+            <p>СТРИЖКИ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>ПРИЧЕСКИ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>МАНИКЮР</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+        <div class="service-cart">
+            <p>СОЛЯРИЙ</p>
+            <img src="http://dummyimage.com/295x280/329456"/>
+        </div>
+    </div>
+    <!--YandexMaps-->
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+>>>>>>> refs/remotes/origin/master
 
 </main>
 
@@ -51,17 +127,24 @@
     <footer>
         <menu>
             <ul>
-                <li><a href="#">УСЛУГИ</a></li>
-                <li><a href="#">АКЦИИ</a></li>
-                <li><a href="#">ГАЛЕРЕЯ</a></li>
-                <li><a href="#">ОТЗЫВЫ</a></li>
-                <li><a href="#">КОНТАКТЫ</a></li>
-                <li><a href="#">ВХОД</a></li>
+                <li><a href="index.html" class="active">ГЛАВНАЯ</a></li>
+                <li><a href="services.html">УСЛУГИ</a></li>
+                <li><a href="stock.html" >АКЦИИ</a></li>
+                <li><a href="gallery.html">ГАЛЕРЕЯ</a></li>
+                <li><a href="review.html">ОТЗЫВЫ</a></li>
+                <li><a href="contacts.html">КОНТАКТЫ</a></li>
             </ul>
         </menu>
     </footer>
-    </div>
+
+
+
+<!--slider-->
+<link rel="stylesheet" type="text/css" href="html/slider/slick.css"/>
+<link rel="stylesheet" type="text/css" href="html/slider/slick-theme.css"/>
+<script type="text/javascript" src="html/slider/slick.min.js"></script>
 <script>
+<<<<<<< HEAD
     $(function() {
         $(".rslides").responsiveSlides();
 
@@ -83,7 +166,35 @@
         before: function(){},   // Function: Before callback
         after: function(){}     // Function: After callback
     });
+=======
+    $(document).ready(function() {
+       var slider= $('.slider');
+        slider.show();
+        slider.slick({
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrows:false,
+            pauseOnHover:false,
+            dots:true,
+            pauseOnDotsHover:true,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+
+                        dots: false
+                    }
+                }
+
+            ]
+        });
+
+>>>>>>> refs/remotes/origin/master
     });
 </script>
+<!--end slider-->
+
+
+
 </body>
 </html>
