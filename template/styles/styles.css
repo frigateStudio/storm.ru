@@ -170,7 +170,7 @@ footer {
 
 /*Отзывы*/
 .containerDoReview {
-  background: url("../image/backgrounds/backReview2.jpg") 0 0 no-repeat;
+  background: url("../img/backgrounds/backReview2.jpg") 0 0 no-repeat;
   /* Добавляем фон */
   background-size: cover;
   height: 450px;
@@ -301,7 +301,7 @@ footer {
 /*контакты*/
 .containerContacts {
   height: 600px;
-  background: url("../image/backgrounds/backContacts.png") 0 0 no-repeat;
+  background: url("../img/backgrounds/backContacts.png") 0 0 no-repeat;
   /* Добавляем фон */
   background-size: cover;
   overflow: hidden; }
@@ -352,7 +352,7 @@ footer {
 .containerServices {
   overflow: hidden;
   min-height: 100vh;
-  background: url("../image/backgrounds/backService.jpg") 0 0 fixed no-repeat black;
+  background: url("../img/backgrounds/backService.jpg") 0 0 fixed no-repeat black;
   /* Добавляем фон */
   background-size: cover; }
   .containerServices .service {
