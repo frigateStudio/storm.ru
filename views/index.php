@@ -2,38 +2,18 @@
 include ROOT.'/views/layouts/header.php';
 ?>
 <main>
-
     <div class="slider">
-        <div>
-            <div class="slide_desc">
-                <h3>ЗАГОЛОВОК</h3>
-                <p>Текст акции или предложения с 50% скидкой!</p>
-            </div>
-            <img src="http://dummyimage.com/1500x500/329456">
+        <?php foreach ($slides as $slide):?>
 
+            <div>
+                <div class="slideText">
+                    <h3><? echo $slide['header']; ?></h3>
+                    <p><? echo $slide['content']; ?></p>
+                </div>
+                <img src="<? echo $slide['url_image']?>">
+            </div>
 
-        </div>
-        <div>
-            <div class="slide_desc">
-                <h3>ЗАГОЛОВОК</h3>
-                <p>Текст акции или предложения с 50% скидкой!</p>
-            </div>
-            <img src="http://dummyimage.com/1500x500/423456">
-        </div>
-        <div>
-            <div class="slide_desc">
-                <h3>ЗАГОЛОВОК</h3>
-                <p>Текст акции или предложения с 50% скидкой!</p>
-            </div>
-            <img src="http://dummyimage.com/1500x500/399096" >
-
-        </div>
-        <div>
-            <div class="slide_desc">
-                <h3>ЗАГОЛОВОК</h3>
-                <p>Текст акции или предложения с 50% скидкой!</p>
-            </div>
-            <img src="http://dummyimage.com/1500x500/320300"></div>
+        <? endforeach;?>
     </div>
 
 
@@ -78,11 +58,6 @@ include ROOT.'/views/layouts/header.php';
     $(document).ready(function() {
         $('.ulMenu-<?echo $idActiveMenu?>').addClass('active');
     });
-
-
-
-
-
 </script>
 
 
