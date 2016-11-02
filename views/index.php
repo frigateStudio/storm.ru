@@ -3,19 +3,18 @@ include ROOT . '/views/layouts/header.php';
 ?>
 <main>
     <div class="slider">
-        <?php foreach ($slides as $slide):?>
+        <?php foreach ($slides as $slide): ?>
 
             <div>
                 <div class="slideText">
                     <h3><? echo $slide['header']; ?></h3>
                     <p><? echo $slide['content']; ?></p>
                 </div>
-                <img src="<? echo $slide['url_image']?>">
+                <img src="<? echo $slide['url_image'] ?>">
             </div>
 
-        <? endforeach;?>
+        <? endforeach; ?>
     </div>
-
 
 
     <a href="#" id="doRecord">ЗАПИСАТЬСЯ ОНЛАЙН</a>
@@ -40,12 +39,13 @@ include ROOT . '/views/layouts/header.php';
         </div>
     </div>
     <!--YandexMaps-->
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Asd5OyIh6qK2ZuzM8Uo6ZiXauGhX-RUd&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
 
 </main>
 <!--подключение футера -->
 <?
-    include ROOT . '/views/layouts/footer.php';
+include ROOT . '/views/layouts/footer.php';
 ?>
 
 <!--Для слайдера-->
@@ -53,9 +53,6 @@ include ROOT . '/views/layouts/header.php';
 <link rel="stylesheet" type="text/css" href="../template/slider/slick-theme.css"/>
 <script type="text/javascript" src="../template/slider/slick.min.js"></script>
 <script type="text/javascript" src="../template/js/sliderIndex.js"></script>
-
-
-
 
 
 </body>
