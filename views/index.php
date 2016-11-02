@@ -44,7 +44,7 @@ include ROOT . '/views/layouts/header.php';
 
 </main>
 <!--подключение футера -->
-<?
+<?php
 include ROOT . '/views/layouts/footer.php';
 ?>
 
