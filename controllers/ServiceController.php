@@ -13,6 +13,7 @@ class ServiceController
     public function actionIndex()
     {
 
+
         
         $idActiveMenu = 2;
         $serviceList = Service::getServiciesList();
