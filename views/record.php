@@ -47,4 +47,4 @@ $date = strftime("%d %B, %Y, %A",$timestamp);
 </div>
 
 <?
-include ROOT.'/views/layouts/footer.php';
+include ROOT . '/views/layouts/footer.php';

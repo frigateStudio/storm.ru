@@ -1,5 +1,5 @@
 <?php
-include ROOT.'/views/layouts/header.php';
+include ROOT . '/views/layouts/header.php';
 $routesPath = ROOT.'/config/times.php';
 $times = include($routesPath);
 ?>
@@ -165,6 +165,6 @@ $times = include($routesPath);
 
 
 
-<? include ROOT.'/views/layouts/footer.php';
+<? include ROOT . '/views/layouts/footer.php';
 
 
