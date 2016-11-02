@@ -1,5 +1,5 @@
-<?php
-include ROOT.'/views/layouts/header.php';
+<?
+include ROOT . '/views/layouts/header.php';
 ?>
 <main>
     <div class="slider">
@@ -7,13 +7,13 @@ include ROOT.'/views/layouts/header.php';
 
             <div>
                 <div class="slideText">
-                    <h3><?php echo $slide['header']; ?></h3>
-                    <p><?php echo $slide['content']; ?></p>
+                    <h3><? echo $slide['header']; ?></h3>
+                    <p><? echo $slide['content']; ?></p>
                 </div>
-                <img src="<?php echo $slide['url_image']?>">
+                <img src="<? echo $slide['url_image']?>">
             </div>
 
-        <?php endforeach;?>
+        <? endforeach;?>
     </div>
 
 
@@ -44,8 +44,8 @@ include ROOT.'/views/layouts/header.php';
 
 </main>
 <!--подключение футера -->
-<?php
-    include ROOT.'/views/layouts/footer.php';
+<?
+    include ROOT . '/views/layouts/footer.php';
 ?>
 
 <!--Для слайдера-->
@@ -53,16 +53,10 @@ include ROOT.'/views/layouts/header.php';
 <link rel="stylesheet" type="text/css" href="../template/slider/slick-theme.css"/>
 <script type="text/javascript" src="../template/slider/slick.min.js"></script>
 <script type="text/javascript" src="../template/js/sliderIndex.js"></script>
-<!--Добавление класса active для активного пункта меню-->
-<script>
-    $(document).ready(function() {
-        $('.ulMenu-<?php echo $idActiveMenu;?>').addClass('active');
-    });
-</script>
+
 
 
 
 
 </body>
 </html>
-
