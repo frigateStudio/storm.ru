@@ -26,11 +26,11 @@ class Service
         return $serviceList;
     }
 
-    public static function getServiciesListItems($id_services)
+    public static function getServiciesListItems()
     {
         $db = Db::getConnection();
 
-        $result = $db->query('SELECT * FROM service WHERE id_service = $id_services');
+        $result = $db->query('SELECT * FROM service');
 
         $i = 0;
         $serviceListItem = array();

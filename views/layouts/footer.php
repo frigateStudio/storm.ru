@@ -11,3 +11,10 @@
     </menu>
 </footer>
 
+<!--Добавление класса active для активного пункта меню-->
+<script>
+    $(document).ready(function() {
+        $('.ulMenu-<?echo $idActiveMenu?>').addClass('active');
+    });
+</script>
+
