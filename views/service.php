@@ -7,23 +7,20 @@ include ROOT . '/views/layouts/header.php';
 
 
     <div class="containerServices">
-    <?php foreach ($serviceList as $serviceListItem) : ?>
-        <div class="service">
-        <div class="headerService">
-            <?php echo $serviceListItem['name']; ?>
-        </div>
+        <?php foreach ($serviceList as $serviceListItem) : ?>
+            <div class="service">
+                <div class="headerService">
+                    <?php echo $serviceListItem['name']; ?>
+                </div>
                 <ul>
-                    <?php foreach ($serviceListItems as $serviceItem):?>
-                    <?php if($serviceItem['id_services'] == $serviceListItem['id_services'])
+                    <?php foreach ($serviceListItems as $serviceItem): ?>
+                        <?php if ($serviceItem['id_services'] == $serviceListItem['id_services'])
                             echo '<li>' . $serviceItem['name'] . " - " . $serviceItem['price'] .
                                 ' р. </li>'; ?>
                     <?php endforeach; ?>
                 </ul>
-    </div>
-    <?php endforeach; ?>
-
-
-
+            </div>
+        <?php endforeach; ?>
 
 
     </div>
@@ -33,7 +30,6 @@ include ROOT . '/views/layouts/header.php';
 <?php
 include ROOT . '/views/layouts/footer.php';
 ?>
-
 
 
 </body>

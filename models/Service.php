@@ -1,11 +1,11 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Fandu
  * Date: 01.11.2016
  * Time: 21:39
  */
-
 class Service
 {
 
