@@ -12,6 +12,8 @@ class ServiceController
     //Action for  start-service's page
     public function actionIndex()
     {
+
+
         
         $idActiveMenu = 2;
         $serviceList = Service::getServiciesList();
