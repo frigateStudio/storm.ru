@@ -140,9 +140,11 @@ footer {
 /*акции*/
 .wrapperStock{
   background-color: #eee;
+
 }
 .stock {
-  width: 80%;
+  text-align: center;
+  width: 100%;
   padding-top: 5px;
   margin: 0 auto;
   overflow: hidden;
@@ -150,6 +152,8 @@ footer {
   display: flex;
   -webkit-flex-wrap: wrap; /* Safari */
   flex-wrap: wrap;
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;
   .cart_stock {
     text-align: center;
     width: 500px;
