@@ -20,7 +20,7 @@ include ROOT . '/views/layouts/header.php';
                         <img src="<?php echo $album['coverUrl'] ?>"/>
                     </a>
                 </div>
-            <? endforeach; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 
