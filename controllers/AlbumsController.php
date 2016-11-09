@@ -9,7 +9,7 @@ class AlbumsController
     {
 
         $idActiveMenu = 4;
-        $albums = Service::getAlbumsList();
+        $albums = Albums::getAlbumsList();
         require_once(ROOT . '/views/albums.php');
         return true;
     }
