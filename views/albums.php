@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alexeivolodin
- * Date: 09.11.16
- * Time: 21:01
- */
-
 include ROOT . '/views/layouts/header.php';
 ?>
 <main>
@@ -31,4 +24,3 @@ include ROOT . '/views/layouts/footer.php';
 ?>
 </body>
 </html>
-
