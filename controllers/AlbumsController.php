@@ -9,9 +9,8 @@ class AlbumsController
     {
 
         $idActiveMenu = 4;
-        $serviceList = Service::getServiciesList();
-        $serviceListItems = Service::getServiciesListItems();
-        require_once(ROOT . '/views/service.php');
+        $albums = Service::getAlbumsList();
+        require_once(ROOT . '/views/albums.php');
         return true;
     }
 
