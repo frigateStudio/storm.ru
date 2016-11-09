@@ -12,8 +12,9 @@ class AlbumController
 
     public function actionIndex()
     {
+        require_once (ROOT . '/models/Albums.php');
         $idActiveMenu = 4;
-        $albums=Album::getAlbumsList();
+        $albums=Albums::getAlbumsList();
         require_once(ROOT . '/views/albums.php');
         return true;
     }
