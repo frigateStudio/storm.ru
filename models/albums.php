@@ -5,7 +5,8 @@
  * Date: 09.11.16
  * Time: 21:07
  */
-class Albums{
+class Album{
+    
     public static function getAlbumsList(){
         $albumsList = array();
         $db = Db::getConnection();
