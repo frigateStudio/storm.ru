@@ -14,30 +14,11 @@
         </div>
         <?php endforeach; ?>
 
-<!--        <div class="cart_stock">-->
-<!--            <img src="../template/img/backgrounds/backReview2.jpg"/>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis consequatur corporis debitis-->
-<!--                ducimus, error iste labore laboriosam molestiae...</p>-->
-<!--            <div class="more"><a href="#">Читать далее</a></div>-->
-<!--        </div>-->
-<!--        <div class="cart_stock">-->
-<!--            <img src="http://dummyimage.com/300x200/ff940f"/>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, atque cupiditate delectus-->
-<!--                eum eveniet facere illum labore modi... </p>-->
-<!--            <div class="more"><a href="#">Читать далее</a></div>-->
-<!--        </div>-->
 
     </div>
     <div class="pagination">
-        <ul>
-            <li><a href="#">1</a> </li>
-            <li><a href="#">2</a> </li>
-            <li class="active"><a href="#">3</a> </li>
-            <li><a href="#">4</a> </li>
-            <li><a href="#">5</a> </li>
-            <li><a href="#">6</a> </li>
-            <li><a href="#">→</a> </li>
-        </ul>
+        <!-- Постраничная навигация -->
+        <?php echo $pagination->get(); ?>
     </div>
 
 </main>

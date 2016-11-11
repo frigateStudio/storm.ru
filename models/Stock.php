@@ -8,10 +8,23 @@
  */
 class Stock
 {
-    public static function getStockList()
+    const SHOW_BY_DEFAULT = 6;
+
+    public static function getStockList($page = 1)
     {
+        $limit = Stock::SHOW_BY_DEFAULT;
+        $offset = ($page-1) * self::SHOW_BY_DEFAULT;
+
         $db = Db::getConnection();
-        $result = $db->query('SELECT id, text, urlImage FROM orchid.stock');
+
+        $sql = 'SELECT id, text, urlImage FROM orchid.stock '
+                        . 'LIMIT :limit OFFSET :offset ';
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $result->bindParam(':offset', $offset, PDO::PARAM_INT);
+
+        $result->execute();
 
         $i = 0;
         $stockList = array();
@@ -39,5 +52,25 @@ class Stock
         $result->execute();
 
         return $result->fetch();
+    }
+
+
+    public static function getTotalStocks()
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'SELECT count(id) AS count FROM orchid.stock';
+
+        // Используется подготовленный запрос
+        $result = $db->prepare($sql);
+
+        // Выполнение коменды
+        $result->execute();
+
+        // Возвращаем значение count - количество
+        $row = $result->fetch();
+        return $row['count'];
     }
 }
