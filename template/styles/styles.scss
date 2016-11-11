@@ -140,9 +140,9 @@ footer {
 /*акции*/
 .wrapperStock{
   background-color: #eee;
-
 }
-.stock {
+
+.stock{
   text-align: center;
   width: 100%;
   padding-top: 5px;
@@ -178,6 +178,32 @@ footer {
       }
     }
   }
+}
+.oneStock{
+  text-align: center;
+  width: 70%;
+  font-size: 15pt;
+  margin: 0 auto 100px auto;
+
+  p{
+    text-align: left;
+  }
+  img{
+    margin: 0 auto;
+    height: 400px;
+    width: 700px;
+  }
+
+}
+#backToStock{
+  background-color:#b83f0a;
+  display: block;
+  padding: 15px 20px;
+  margin: 10px auto;
+  width: 200px;
+  text-align: center;
+  font-size: 15pt;
+
 }
 .pagination {
   text-align: center;
