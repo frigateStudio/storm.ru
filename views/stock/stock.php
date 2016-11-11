@@ -10,7 +10,7 @@
                 echo substr($stockListItem['text'],0,154);
                 if(strlen($stockListItem['text']) > 154) echo "..."; ?></p>
                 <?php if(strlen($stockListItem['text']) > 154)
-                    echo "<div class='more'><a href='#'>Читать далее</a></div>"; ?>
+                    echo "<div class='more'><a href='/stock/" . $stockListItem['id'] . "'>Читать далее</a></div>"; ?>
         </div>
         <?php endforeach; ?>
 
