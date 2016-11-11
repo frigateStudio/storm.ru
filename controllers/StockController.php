@@ -21,4 +21,14 @@ class StockController
         return true;
     }
 
+    public function actionView($id)
+    {
+        $idActiveMenu = 3;
+        $stockItem = Stock::getStockItemById($id);
+
+        $page = Stock::getPageNumber($id);
+
+        require_once(ROOT . '/views/stock/stockItem.php');
+        return true;
+    }
 }

@@ -73,4 +73,15 @@ class Stock
         $row = $result->fetch();
         return $row['count'];
     }
+
+    public static function getPageNumber($id)
+    {
+        $page = 1;
+        while($id > Stock::SHOW_BY_DEFAULT)
+        {
+            $page++;
+            $id-=Stock::SHOW_BY_DEFAULT;
+        }
+        return $page;
+    }
 }
