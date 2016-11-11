@@ -24,6 +24,8 @@
 .slider img {
     width: 100%;
     opacity: 0.3;
+    height: 500px;
+
 }
 @media (max-width: 900px) {
     .slideText {
