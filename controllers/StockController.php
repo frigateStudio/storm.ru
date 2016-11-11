@@ -11,7 +11,10 @@ class StockController
     //Action for  start-service's page
     public function actionIndex()
     {
-        require_once(ROOT . '/html/stock.html');
+        $idActiveMenu = 3;
+        $stockList = Stock::getStockList();
+
+        require_once(ROOT . '/views/stock/stock.php');
         return true;
     }
 
