@@ -14,6 +14,14 @@ class AlbumsController
         return true;
     }
 
+    public function actionAlbum($idAlbum)
+    {
+        $idActiveMenu = 4;
+        $photos = Albums::getPhotoByAlbum($idAlbum);
+        $nameAlbum = Albums::getNameAlbum($idAlbum);
+       require_once(ROOT . '/views/album.php');
+        return true;
+    }
 
 }
 
