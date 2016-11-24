@@ -2,7 +2,7 @@
 
 return array(
 
-
+    'review/page-([0-9]+)' => 'review/review/$1', //actionReview in ReviewController with 1 parameters
     'stock/([0-9]+)' => 'stock/view/$1', //actionView in StockController with 1 parameters
 
 	'album/([0-9]+)'=> 'albums/album/$1', //actionAlbum в AlbumsController
