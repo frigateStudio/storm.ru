@@ -26,20 +26,21 @@
 
             <div class="formReview">
                 <img src="../template/img/buttons/close.svg" id="closeForm">
-                <form>
+                <form method="POST" id="recordReview" action="javascript:void(null);" onsubmit="call()">
                     <span>Имя</span>
                     <p>
-                        <input type="text" id="name" title="name">
+                        <input type="text" id="name" title="name" name="name" required>
                     </p>
                     <span>email</span>
                     <p>
-                        <input type="email" id="email" title="email">
+                        <input type="email" id="email" title="email" name ="email" required>
                     </p>
                     <span>Ваш отзыв</span>
                     <p>
-                        <textarea  id="review" title="review" ></textarea>
+                        <textarea  id="review" title="review"  name="review" required></textarea>
                     </p>
-                    <p><button  id="button">Отправить</button></p>
+
+                    <p><button id="button">Отправить</button></p>
 
 
                 </form>
@@ -97,7 +98,7 @@
 
             });
             $("#closeForm").click(function () {
-
+                $('#thank').hide();
                 form.hide(300);
                 divSlider.show(300);
                 container.height(500);
@@ -122,7 +123,28 @@
 
         });
     </script>
-    <!--end slider-->
+<!--end slider-->
+<!--ajax отправление формы-->
+<script type="text/javascript">
+    function call() {
+
+        var form=$('#recordReview');
+       var msg   = form.serialize();
+        $.ajax({
+            type: 'POST',
+            url: '/addReview',
+            data: msg,
+            success: function(data) {
+
+                alert(data);
+
+
+            }
+        });
+
+    }
+</script>
+
 
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
