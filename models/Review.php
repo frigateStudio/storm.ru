@@ -100,4 +100,10 @@ class Review
         $row = $result->fetch();
         return $row['count'];
     }
+    public static function recordReview($name,$email, $review)
+    {
+        $db=Db::getConnection();
+        $sql = "INSERT INTO orchid.review(name,email,text) VALUES($name,$email,$review)";
+        $db->query($sql);
+    }
 }

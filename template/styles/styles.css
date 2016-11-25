@@ -259,6 +259,8 @@ footer {
   width: 50%;
   margin: 40px 0 0 60px;
   text-align: center; }
+  .formReview #thank {
+    color: white; }
   .formReview span {
     color: white;
     font-size: 15pt; }
