@@ -16,14 +16,14 @@ class ReviewController
         require_once(ROOT . '/views/review.php');
         return true;
     }
-    public function actionAddReview(){
-        $name =$_POST['name'];
-        $email=$_POST['email'];
-        $review=$_POST['review'];
-        Review::recordReview($name,$email,$review);
-        echo "Наше мнение очень важно для нас! благодарим за отзыв!";
 
-       
+    public function actionAddReview()
+    {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $review = $_POST['review'];
+        Review::recordReview($name, $email, $review);
+        echo "Ваше мнение очень важно для нас! Благодарим за отзыв!";
         return true;
     }
 }

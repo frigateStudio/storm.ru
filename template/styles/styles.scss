@@ -322,6 +322,8 @@ footer {
   text-align: center;
   #thank{
     color:white;
+    font-size: 25pt;
+    margin-top:50px;
   }
   span{
     color:white;
@@ -342,6 +344,7 @@ footer {
     font-size: 15pt;
     opacity: 0.5;
 
+
   }
   #name:focus, #email:focus, #review:focus{
     opacity: 1;
@@ -358,6 +361,7 @@ footer {
     width: 50%;
     font-family: "Poiret One", sans-serif;
     font-size: 25pt;
+    cursor: pointer;
   }
   #closeForm {
   position: absolute;

@@ -11,11 +11,11 @@ class Review
         $db = Db::getConnection();
 
         $result = $db->query('SELECT id, text, name, time, best, status '
-                . 'FROM orchid.review WHERE best = 1 AND status = 1');
+            . 'FROM orchid.review WHERE best = 1 AND status = 1');
 
         $i = 0;
         $reviewBestList = array();
-        while($row = $result->fetch()) {
+        while ($row = $result->fetch()) {
             $reviewBestList[$i]['id'] = $row['id'];
             $reviewBestList[$i]['text'] = $row['text'];
             $reviewBestList[$i]['name'] = $row['name'];
@@ -30,12 +30,12 @@ class Review
     public static function getActiveListReviews($page = 1)
     {
         $limit = Review::SHOW_BY_DEFAULT;
-        $offset = ($page-1) * self::SHOW_BY_DEFAULT;
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
         $db = Db::getConnection();
 
         $sql = 'SELECT id, text, name, time, status FROM orchid.review WHERE '
-                . 'status = 1 LIMIT :limit OFFSET :offset';
+            . 'status = 1 LIMIT :limit OFFSET :offset';
 
         $result = $db->prepare($sql);
         $result->bindParam(':limit', $limit, PDO::PARAM_INT);
@@ -45,7 +45,7 @@ class Review
 
         $i = 0;
         $reviewList = array();
-        while($row = $result->fetch()) {
+        while ($row = $result->fetch()) {
             $reviewList[$i]['id'] = $row['id'];
             $reviewList[$i]['text'] = $row['text'];
             $reviewList[$i]['name'] = $row['name'];
@@ -73,8 +73,8 @@ class Review
             'декабря');
 
         $time = substr($time, 0, 10);
-        $stringTime = explode("-",$time,3);
-        if($months)
+        $stringTime = explode("-", $time, 3);
+        if ($months)
             $time = (int)$stringTime[2] . ' ' . $month[$stringTime[1]] . ' ' . $stringTime[0];
         else
             $time = (int)$stringTime[2] . '.' . (int)$stringTime[1] . '.' . $stringTime[0];
@@ -100,10 +100,12 @@ class Review
         $row = $result->fetch();
         return $row['count'];
     }
-    public static function recordReview($name,$email, $review)
+
+    public static function recordReview($name, $email, $review)
     {
-        $db=Db::getConnection();
-        $sql = "INSERT INTO orchid.review(name,email,text) VALUES($name,$email,$review)";
-        $db->query($sql);
+        $db = Db::getConnection();
+        $sql = "INSERT INTO orchid.review(name,email,text) VALUES(?,?,?)";
+        $result = $db->prepare($sql);
+        $result->execute(array($name, $email, $review));
     }
 }
