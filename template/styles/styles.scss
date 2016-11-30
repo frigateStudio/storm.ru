@@ -315,6 +315,11 @@ footer {
   }
 
 }
+.error{
+  color: #590614;
+  font-size: 14pt;
+
+}
 .formReview{
   display: none;
   width: 50%;
@@ -346,6 +351,7 @@ footer {
 
 
   }
+
   #name:focus, #email:focus, #review:focus{
     opacity: 1;
     outline: none;

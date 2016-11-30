@@ -29,16 +29,18 @@
             <form method="POST" id="recordReview" action="javascript:void(null);" onsubmit="call()">
                 <span>Имя</span>
                 <p>
-                    <input type="text" id="name"  name="name">
-                    <span id="erName"></span>
+                    <input type="text" id="name" name="name">
+                    <span id="nameError"></span>
                 </p>
                 <span>email</span>
                 <p>
-                    <input type="email" id="email" name="email" >
+                    <input type="email" id="email" name="email">
+                    <span id="emailError"></span>
                 </p>
                 <span>Ваш отзыв</span>
                 <p>
-                    <textarea id="review"  name="review" class="required"></textarea>
+                    <textarea id="review" name="review"></textarea>
+                    <span id="reviewError"></span>
                 </p>
 
                 <p>
@@ -75,11 +77,23 @@
 
 <link rel="stylesheet" type="text/css" href="../template/slider/slick.css"/>
 <script type="text/javascript" src="../template/slider/slick.min.js"></script>
+<script type="text/javascript" src="../template/js/validator.min.js"></script>
 <script>
+    var flErrorName = false; //общие ошибки
+    var flErrorEmail = false;
+    var errorName = $('#nameError');
+    var inputName = document.getElementById('name');
+    var inputEmail = $("#email");
+    var errorEmail = $("#emailError");
+
     $(document).ready(function () {
 
-        //инициализация слайдера
+
         var slider = $('.bestReviews');
+        var container = $(".containerDoReview");
+        var divSlider = $(".reviewSlider");
+        var form = $(".formReview");
+        //инициализация слайдера
         slider.show();
         slider.slick({
             autoplay: true,
@@ -90,9 +104,7 @@
             nextArrow: "#nextArrow"
         });
 
-        var container = $(".containerDoReview");
-        var divSlider = $(".reviewSlider");
-        var form = $(".formReview");
+
         //обработка кликов по конпке "оставить отзыв"
         $('#doReview').click(function () {
             slider.hide();
@@ -103,12 +115,10 @@
             divSlider.hide(300);
             form.show(300);
             $('#thank').empty();
-
-
         });
+
         //обработка кликов по кнопке "закрыть форму"
         $("#closeForm").click(function () {
-
             form.hide(300);
             divSlider.show(300);
             container.height(500);
@@ -120,29 +130,102 @@
                 pauseOnHover: true,
                 prevArrow: "#prevArrow",
                 nextArrow: "#nextArrow"
-            });
+            })
+        });
+        //------ВАЛИДАЦИЯ-------
 
+
+        //обработка измения значения поля Имя
+        inputName.oninput = function () {
+         checkValidateName();
+
+        };
+        //обработка изменений поля email после выхода из фокуса
+        inputEmail.change(function () {
+            flErrorEmail=false;
+            errorEmail.text("");
+            if (!validator.isEmail(inputEmail.val())) {
+                errorEmail.text("Введите корректный email адрес");
+                flErrorEmail = true;
+            }
+            else
+                flErrorEmail = false;
 
         });
 
 
     });
-</script>
-<script>
- 
 
 
+    //проверка на пустоту всех полей формы и наличия остальных ошибок
+    function checkForm() {
 
-</script>
+        checkEmptyInput("name");
+        checkEmptyInput("email");
+        checkEmptyInput("review");
 
-<script>
+        return checkEmptyInput("name") && checkEmptyInput("email") && checkEmptyInput("review")
+            && checkValidEmail() && checkValidateName() && !flErrorEmail && !flErrorName;
 
-    //отправление формы ajax
+    }
 
+    //проверка на пустоту поля с именем nameInput
+    //и выдача сообщения об ошибке в span #nameInputError
+    function checkEmptyInput(nameInput) {
+        var message = $("#" + nameInput + "Error");
+        var input = $("#" + nameInput);
+        message.text("");
+        if (input.val() == "") {
+            message.text("Пожауйста, заполните это поле");
+            input.focus();
+            return false;
+        }
+        else return true;
+    }
+    function checkValidEmail() {
+        if (!validator.isEmail($("#email").val())) {
+            $("#emailError").text("Введите корректный email адрес");
+
+            return false;
+
+        }
+        flErrorEmail=false;
+        return true;
+    }
+    function checkValidateName() {
+        errorName.text("");
+        flErrorName = false;
+        var arrName = inputName.value.split(" ");
+        if (arrName.length > 3) {
+            errorName.text("Коилчество слов должно быть не более 3х");
+            flErrorName=true;
+            return;
+        }
+
+        for (var i = 0; i < arrName.length; i++) {
+            if (arrName[i] == "")
+                break;
+            else if (!validator.isAlpha(arrName[i], 'ru-RU')) {
+                errorName.text("Ошибка ввода! Допускаются только русские символы");
+                flErrorName = true;
+                break;
+            }
+            else
+                flErrorName = false;
+        }
+        if (inputName.value == "") {
+            errorName.text("");
+            flErrorName = true;
+        }
+        return true;
+    }
+    //------конец валидации------
+    //------отправление формы ajax-------
     function call() {
+
         var form = $('#recordReview');
         var msg = form.serialize();
-
+        if (checkForm()) {
             $.ajax({
                 type: 'POST',
                 url: '/addReview',
@@ -160,6 +243,7 @@
             });
 
 
+        }
     }
 
 </script>
