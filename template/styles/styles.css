@@ -254,7 +254,7 @@ footer {
     .reviews .review p {
       padding: 20px 30px; }
 
-.error {
+#nameError, #emailError, #reviewError {
   color: #590614;
   font-size: 14pt; }
 
