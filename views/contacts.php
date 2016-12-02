@@ -245,12 +245,12 @@ include ROOT . '/views/layouts/header.php';
                         recordQuestion.hide(300);
                         buttonQuestion.show(300);
                         containerContacts.height(450);
-                    }, 3000);
+                    }, 6000);
                     setTimeout(function () {
                         $("#name").val('');
                         $("#email").val('');
                         $("#question").val('');
-                    }, 3500);
+                    }, 6500);
 
                 }
 

@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: auto; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+a {
+  text-decoration: none; }
+
+body {
+  width: 100%;
+  min-width: 1000px;
+  background-color: #bbbbbb; }
+
+main {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  width: 1000px;
+  height: 100vh;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+
+#errorSign {
+  display: none;
+  color: red; }
+
+#signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 300px; }
+  #signIn #login, #signIn #password {
+    width: 250px;
+    height: 30px;
+    font-size: 14pt;
+    font-weight: 300; }
+  #signIn label {
+    font-size: 16pt; }
+  #signIn form h3 {
+    font-size: 12pt;
+    margin-bottom: 20px;
+    font-weight: 400; }
+  #signIn #button {
+    border: none;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 300;
+    height: 40px;
+    width: 254px;
+    background-color: #b83f0a;
+    color: white;
+    margin-top: 50px; }
+
+#mainMenu {
+  text-align: center;
+  padding-top: 30px; }
+  #mainMenu span {
+    font-weight: 100;
+    font-size: 17pt; }
+  #mainMenu #menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  #mainMenu .controlButton {
+    line-height: 150px;
+    display: block;
+    font-size: 17pt;
+    font-weight: 100;
+    width: 306px;
+    background-color: #b83f0a;
+    color: white;
+    height: 150px;
+    text-align: center;
+    margin: 10px; }
+  #mainMenu .controlButton:hover {
+    background-color: #990000; }
+
+/*# sourceMappingURL=adminStyle.css.map */

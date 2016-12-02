@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: auto;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+body {
+  width: 100%;
+  min-width: 1000px;
+  background-color: #bbbbbb;
+
+}
+
+main {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  width: 1000px;
+  height: 100vh; //Убрать в релизе!
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+}
+
+//форма входа
+#errorSign {
+
+  display: none;
+  color: red;
+
+}
+
+#signIn {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 300px;
+
+  #login, #password {
+    width: 250px;
+    height: 30px;
+    font-size: 14pt;
+    font-weight: 300;
+  }
+  label {
+    font-size: 16pt;
+  }
+  form h3 {
+    font-size: 12pt;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  #button {
+    border: none;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 300;
+    height: 40px;
+    width: 254px;
+    background-color: #b83f0a;
+    color: white;
+    margin-top: 50px;
+
+  }
+}
+
+//главное меню
+#mainMenu {
+  text-align: center;
+  padding-top: 30px;
+  span {
+    font-weight: 100;
+    font-size: 17pt;
+  }
+  #menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .controlButton {
+    line-height: 150px;
+    display: block;
+    font-size: 17pt;
+    font-weight: 100;
+    width: 306px;
+    background-color: #b83f0a;
+    color: white;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+  }
+  .controlButton:hover {
+    background-color: #990000;
+  }
+
+}
