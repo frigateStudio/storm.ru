@@ -426,10 +426,30 @@ footer {
 }
 /*контакты*/
 .containerContacts{
-  height: 600px;
+  height: 450px;
   background: url("../img/backgrounds/backContacts.png") 0 0  no-repeat; /* Добавляем фон */
   background-size: cover;
   overflow: hidden;
+  .contactsFormError{
+    color:red;
+    font-size: 10pt;
+
+
+  }
+  #recordQuestion{
+    display: none;
+  }
+  #buttonQuestion{
+    margin-top: 35px;
+    text-align: center;
+    font-size: 15pt;
+    height: 50px;
+    width: 250px;
+    padding-top:20px;
+    background-color:#b83f0a;
+    color:white;
+    cursor: pointer;
+  }
 
   .contacts{
     position: absolute;
@@ -464,8 +484,12 @@ footer {
   }
 .feedback{
 
-
   font-size: 15pt;
+  #thank{
+
+    color:#b83f0a;
+    font-size: 12pt;
+  }
   form{
     text-align: center;
     #name,#email{
