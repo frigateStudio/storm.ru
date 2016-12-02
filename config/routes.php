@@ -1,6 +1,7 @@
 <?php
 
 return array(
+	'contacts'=>'contacts/index', //actionIndex in ContactsConroller
 	'addReview' => 'review/AddReview',
 		'review/page-([0-9]+)' => 'review/review/$1', //actionReview in ReviewController with 1 parameters
     'stock/([0-9]+)' => 'stock/view/$1', //actionView in StockController with 1 parameters
