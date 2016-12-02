@@ -17,5 +17,16 @@ class ContactsController
         require_once(ROOT . '/views/contacts.php');
         return true;
     }
+    
+    public function actionAddQuestion()
+    {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $question = $_POST['question'];
+        Contacts::recordQuestion($name, $email, $question);
+        
+        echo "Спасибо за Ваш вопрос! <br> Вы получите ответ в ближайшее время на ваш email";
+        return true;
+    }
 
 }

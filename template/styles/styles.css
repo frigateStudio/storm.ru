@@ -385,7 +385,8 @@ footer {
   .containerContacts .feedback {
     font-size: 15pt; }
     .containerContacts .feedback #thank {
-      color: #b83f0a; }
+      color: #b83f0a;
+      font-size: 12pt; }
     .containerContacts .feedback form {
       text-align: center; }
       .containerContacts .feedback form #name, .containerContacts .feedback form #email {

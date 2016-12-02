@@ -23,7 +23,8 @@ class ReviewController
         $email = $_POST['email'];
         $review = $_POST['review'];
         Review::recordReview($name, $email, $review);
-        echo "Ваше мнение очень важно для нас! Благодарим за отзыв!";
+        echo "Благодарим за отзыв! Ваше мнение очень важно для нас! Он будет опубликован
+        в ближайшее время.";
         return true;
     }
 }

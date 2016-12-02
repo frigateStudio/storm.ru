@@ -228,45 +228,35 @@ include ROOT . '/views/layouts/header.php';
 
     function call() {
 
-        var form = $('#recordReview');
+        var form = $('#recordQuestion');
         var msg = form.serialize();
 
 
-
-
-        /*$("#recordQuestion").hide(300);
-         $("#buttonQuestion").show(300);
-         $(".containerContacts").height(450);*/
-
         if (checkForm()) {
 
-            /*$.ajax({
-             type: 'POST',
-             url: '/addReview',
-             data: msg,
-             success: function (data) {
-             $("#thank").text(data);
-             $("#recordReview").hide();
-             setTimeout(function () {
-             $("#closeForm").click();
-             }, 1500);*/
+            $.ajax({
+                type: 'POST',
+                url: '/addQuestion',
+                data: msg,
+                success: function (data) {
 
-            thank.text("Спсиоб!");
-            setTimeout(function () {
-                recordQuestion.hide(300);
-                buttonQuestion.show(300);
-                containerContacts.height(450);
+                    thank.html(data);
+                    setTimeout(function () {
+                        recordQuestion.hide(300);
+                        buttonQuestion.show(300);
+                        containerContacts.height(450);
+                    }, 3000);
+                    setTimeout(function () {
+                        $("#name").val('');
+                        $("#email").val('');
+                        $("#question").val('');
+                    }, 3500);
+
+                }
 
 
-            }, 2000);
-            $("#name").val('');
-            $("#email").val('');
-            $("#review").val('');
-            alert("отправлено!");
+            })
         }
-
-
-
     }
 
 </script>
