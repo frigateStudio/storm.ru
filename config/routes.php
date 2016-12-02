@@ -1,6 +1,8 @@
 <?php
 
 return array(
+    'auth'=>'admin/auth',
+    'admin'=>"admin/index",
     'contacts' => 'contacts/index', //actionIndex in ContactsController
     'addQuestion' => 'contacts/AddQuestion',
     'addReview' => 'review/AddReview',
