@@ -208,3 +208,29 @@ main {
 .addSlide:hover{
   background-color: darkgreen;
 }
+.formAddSlide{
+  text-align: center;
+  #head{
+    width: 600px;
+    height: 30px;
+    font-size: 14pt;
+  }
+  #desc{
+    width: 600px;
+    height: 200px;
+    font-size: 14pt;
+    border: 1px solid #ccc;
+  }
+
+}
+#buttonAdd{
+width: 200px;
+  height: 50px;
+  background-color:green;
+
+  border: none;
+  color:white;
+  border-radius: 10px;
+  font-size: 16pt;
+  margin: 10px auto 50px auto;
+}
