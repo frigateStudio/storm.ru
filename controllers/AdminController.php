@@ -8,14 +8,12 @@
  */
 class AdminController
 {
-
-
     public function actionIndex()
     {
         session_start();
         if (!isset($_SESSION['auth']))
             header("Location:/auth");
-
+        $title = "Панель администратора";
         require_once(ROOT . '/views/admin/index.php');
 
         return true;
@@ -23,22 +21,30 @@ class AdminController
 
     public function actionAuth()
     {
-        // if (isset($_POST['login']) && isset($_POST['password']))
+        $error="";
+        if (isset($_POST['login']) && isset($_POST['password'])) {
+            $login = $_POST['login'];
+            $password = $_POST['password'];
 
-        if (Users::checkUsers("admvin", "root") == 1) {
-            session_start();
-
-            $_SESSION['auth'] = 1;
-            header("Location:/admin");
+            if (Users::checkUsers($login, $password) == 1) {
+                session_start();
+                $_SESSION['auth'] = 1;
+                header("Location:/admin");
+            }
+            else $error="Неверный логин или пароль";
         }
-        else
-            session_start();
-        session_destroy();
-
-
+        $title = "Форма входа";
         require_once(ROOT . '/views/admin/auth.php');
         return true;
 
+    }
+    public function actionExit(){
+        $error="";
+        session_start();
+        session_destroy();
+        $title = "Форма входа";
+        require_once(ROOT . '/views/admin/auth.php');
+        return true;
     }
 
 

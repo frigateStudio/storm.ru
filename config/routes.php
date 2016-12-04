@@ -1,8 +1,13 @@
 <?php
 
 return array(
+    //admin
+    'deleteSlide/([0-9]+)'=>'adminSlider/deleteSlide/$1',
+    'editSlider'=>'adminSlider/index',
+    'auth/exit'=>"admin/exit",
     'auth'=>'admin/auth',
     'admin'=>"admin/index",
+    //site
     'contacts' => 'contacts/index', //actionIndex in ContactsController
     'addQuestion' => 'contacts/AddQuestion',
     'addReview' => 'review/AddReview',

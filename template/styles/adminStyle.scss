@@ -24,25 +24,64 @@ main {
   background-color: white;
   font-family: 'Open Sans', sans-serif;
   width: 1000px;
-  height: 100vh; //Убрать в релизе!
+  min-height: 100vh; //Убрать в релизе!
+  height: 100%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
+}
+//кнопки навигации
+.navButton {
+  color: white;
+  background-color: #999;
+  width: 100px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 7px;
+
+  margin: 10px;
+
+}
+#buttonBack{
+
+}
+#buttonInSite,#buttonExit,#buttonOnPage{
+  float:right;
+}
+.navButton:hover, #backToSite:hover {
+  background-color: #555;
+}
+#buttonOnPage{
+  width: 240px;
 }
 
 //форма входа
 #errorSign {
 
-  display: none;
   color: red;
 
 }
 
-#signIn {
 
+
+
+#backToSite {
+  background-color: #999;
+  width: 150px;
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+  margin-bottom: 50px;
+
+}
+
+#signIn {
+  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   text-align: center;
   width: 300px;
 
@@ -76,6 +115,7 @@ main {
 
 //главное меню
 #mainMenu {
+  margin-top: 50px;
   text-align: center;
   padding-top: 30px;
   span {
@@ -103,4 +143,68 @@ main {
     background-color: #990000;
   }
 
+}
+.headerMenu{
+  font-size: 20pt;
+  text-align: center;
+  padding: 30px 0;
+
+}
+//управление слайдером
+.controlSlider {
+  margin: 0 100px;
+  padding-top: 30px;
+  span{
+    float: left;
+    font-size: 16pt;
+  }
+  .editButton {
+    margin: 10px 0 20px 0;
+    background-color: #b83f0a;
+    width: 150px;
+    display: inline-block;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+  }
+  .editButton:nth-child(odd):hover {
+    background-color: red;
+  }
+  .editButton:nth-child(even):hover {
+    background-color: green;
+  }
+
+  .slide {
+    text-align: center;
+    padding: 10px;
+
+    img {
+      height: 200px;
+      width: 600px;
+      margin: 20px 0;
+    }
+  }
+  .slide:nth-child(even) {
+    background-color: #eee;
+  }
+  .slide:nth-child(odd) {
+    background-color: #ddd;
+  }
+
+}
+.addSlide{
+  display: block;
+  text-align: center;
+  height: 50px;
+  background-color:green;
+  width: 200px;
+  margin: 30px auto;
+  color:white;
+  border-radius: 10px;
+  line-height: 50px;
+  font-size: 16pt;
+}
+.addSlide:hover{
+  background-color: darkgreen;
 }
