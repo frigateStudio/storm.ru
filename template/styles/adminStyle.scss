@@ -29,6 +29,7 @@ main {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
 }
+
 //кнопки навигации
 .navButton {
   color: white;
@@ -42,16 +43,20 @@ main {
   margin: 10px;
 
 }
-#buttonBack{
+
+#buttonBack {
 
 }
-#buttonInSite,#buttonExit,#buttonOnPage{
-  float:right;
+
+#buttonInSite, #buttonExit, #buttonOnPage {
+  float: right;
 }
+
 .navButton:hover, #backToSite:hover {
   background-color: #555;
 }
-#buttonOnPage{
+
+#buttonOnPage {
   width: 240px;
 }
 
@@ -61,9 +66,6 @@ main {
   color: red;
 
 }
-
-
-
 
 #backToSite {
   background-color: #999;
@@ -144,17 +146,19 @@ main {
   }
 
 }
-.headerMenu{
+
+.headerMenu {
   font-size: 20pt;
   text-align: center;
   padding: 30px 0;
 
 }
+
 //управление слайдером
 .controlSlider {
   margin: 0 100px;
   padding-top: 30px;
-  span{
+  span {
     float: left;
     font-size: 16pt;
   }
@@ -193,44 +197,58 @@ main {
   }
 
 }
-.addSlide{
+
+.addSlide {
   display: block;
   text-align: center;
   height: 50px;
-  background-color:green;
+  background-color: green;
   width: 200px;
   margin: 30px auto;
-  color:white;
+  color: white;
   border-radius: 10px;
   line-height: 50px;
   font-size: 16pt;
 }
-.addSlide:hover{
+
+.addSlide:hover,#buttonAdd:hover {
   background-color: darkgreen;
 }
-.formAddSlide{
+
+.formAddSlide {
   text-align: center;
-  #head{
+  display: none;
+  p {
+    margin-bottom: 20px;
+  }
+  #head {
     width: 600px;
     height: 30px;
     font-size: 14pt;
   }
-  #desc{
+  #desc {
     width: 600px;
     height: 200px;
     font-size: 14pt;
     border: 1px solid #ccc;
   }
+  #errorHead, #errorDesc, #errorFile {
+    color: red;
+    font-size: 10pt;
+    display: none;
+  }
 
 }
-#buttonAdd{
-width: 200px;
-  height: 50px;
-  background-color:green;
 
+#buttonAdd {
+  width: 200px;
+  height: 50px;
+  background-color: green;
+  cursor: pointer;
   border: none;
-  color:white;
+  color: white;
   border-radius: 10px;
   font-size: 16pt;
   margin: 10px auto 50px auto;
 }
+

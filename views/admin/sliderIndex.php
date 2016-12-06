@@ -36,30 +36,107 @@ include ROOT . '/views/layouts/adminHeader.php';
 
     </div>
     <?php if (count($slides) < 10)
-        echo '<a href="#" class="addSlide">Добавить слайд</a>';
+        echo '<a href="#formAddSlide" class="addSlide">Добавить слайд</a>';
     ?>
 
 
-    <div class="formAddSlide">
-
-        <form enctype="multipart/form-data" action="/" method="POST">
+    <div class="formAddSlide" id="formAddSlide">
+        <form enctype="multipart/form-data" id="formAdd" method="POST" action="javascript:void(null);"
+              onsubmit="call()">
             <p>
                 <label for="head">Заголовок</label><br>
-                <input type="text" id="head" name="head">
+                <input type="text" id="head" name="head"><br>
+                <span id="errorHead">Пожалуйста, заполните это поле</span>
             </p>
             <p>
                 <label for="desc">Текст</label><br>
-                <textarea type="text" id="desc" name="desc"></textarea>
+                <textarea type="text" id="desc" name="desc"></textarea><br>
+                <span id="errorDesc">Пожалуйста, заполните это поле</span>
             </p>
-            <input type="hidden" name="MAX_FILE_SIZE" value="30000"/>
-            <label for="imgSlide">Изображение</label><br>
-            <input name="imgSlide"  type="file" accept="image/*"/><br>
+            <p>
+                <input type="hidden" name="MAX_FILE_SIZE" value="21000000"/>
+                <label for="imgSlide">Изображение (Рекомендуется разрешение 1200Х400)</label><br>
+                <input name="imgSlide" id="file" type="file" accept="image/*"><br>
+                <span id="errorFile">Пожалуйста, выберите файл</span>
+            </p>
             <button id="buttonAdd">Добавить</button>
         </form>
+        <a name="end"></a>
 
     </div>
 
 
 </main>
+<script>
+    var inputHead = $("#head");
+    var errorHead = $("#errorHead");
+    var inputDesc = $("#desc");
+    var errorDesc = $("#errorDesc");
+    var inputFile = $("#file");
+    var errorFile = $("#errorFile");
+    var files=0;
+    $(document).ready(function () {
+        $(".addSlide").click(function () {
+            $("#formAddSlide").show();
+            $(".addSlide").hide();
+        });
+
+        $('input[type=file]').change(function () {
+            files = this.files;
+        });
+    });
+    function checkEmpty(input) {
+        return !(input.val() == "");
+    }
+    function call() {
+        errorHead.hide();
+        errorDesc.hide();
+        errorFile.hide();
+        var flErrorHead = false;
+        var flErrorDesc = false;
+        var flErrorFile = false;
+
+
+        if (!checkEmpty(inputHead)) {
+            flErrorHead = true;
+            errorHead.show();
+        }
+        if (!checkEmpty(inputDesc)) {
+            flErrorDesc = true;
+            errorDesc.show();
+        }
+        if (!checkEmpty(inputFile)) {
+            flErrorFile = true;
+            errorFile.show();
+        }
+
+        if (!flErrorHead && !flErrorDesc && !flErrorFile) {
+
+
+// Вешаем функцию на событие
+// Получим данные файлов и добавим их в переменную
+
+
+
+
+
+
+            var formData = new FormData($('form')[0]);
+            $.ajax({
+                type: "POST",
+                processData: false,
+                contentType: false,
+                url: "/addSlide",
+                data:  formData
+            })
+                .done(function( data ) {
+                    window.location.href = "/editSlider";
+                });
+        }
+    }
+
+
+</script>
+
 </body>
 </html>

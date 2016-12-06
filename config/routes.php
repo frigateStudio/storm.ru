@@ -2,6 +2,7 @@
 
 return array(
     //admin
+    'addSlide'=>'adminSlider/addSlide',
     'deleteSlide/([0-9]+)'=>'adminSlider/deleteSlide/$1',
     'editSlider'=>'adminSlider/index',
     'auth/exit'=>"admin/exit",

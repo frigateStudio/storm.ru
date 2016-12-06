@@ -1,11 +1,11 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: alexeivolodin
  * Date: 01.11.16
  * Time: 16:02
  */
-
 class Slider
 {
     //Возвращает массив с данными мастеров из бд
@@ -24,11 +24,36 @@ class Slider
         }
         return array_reverse($sliderList);
     }
-    public static function deleteSlideById($id){
+
+    public static function deleteSlideById($id)
+    {
         $db = Db::getConnection();
+        $sql = "SELECT url_image FROM indexSlider WHERE id=?";
+        $result = $db->prepare($sql);
+        $result->execute(array($id));
+        $row=$result->fetch();
         $sql = "DELETE FROM indexSlider WHERE id=?";
         $result = $db->prepare($sql);
-      return $result->execute(array($id));
-          
+        $result->execute(array($id));
+        return $row['url_image'];
+
     }
+
+    public static function addSlide($head, $desc)
+    {
+        $db = Db::getConnection();
+        $sql = "INSERT INTO indexSlider(header, content) VALUES (?,?) ";
+        $result = $db->prepare($sql);
+        $result->execute(array($head, $desc));
+        return $db->lastInsertId();
+    }
+
+    public static function addImageToSlide($id, $url_image)
+    {
+        $db = Db::getConnection();
+        $sql = "UPDATE indexSlider SET url_image=? WHERE id=?";
+        $result = $db->prepare($sql);
+        return $result->execute(array($url_image, $id));
+    }
+
 }
