@@ -189,4 +189,18 @@ main {
   font-size: 16pt;
   margin: 10px auto 50px auto; }
 
+#loader {
+  position: fixed;
+  height: 100vh;
+  color: white;
+  font-size: 24pt;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.7); }
+
 /*# sourceMappingURL=adminStyle.css.map */

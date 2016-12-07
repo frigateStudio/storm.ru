@@ -64,18 +64,24 @@ include ROOT . '/views/layouts/adminHeader.php';
         <a name="end"></a>
 
     </div>
+    <div id="loader">
+        Загрузка...
+    </div>
 
 
 </main>
 <script>
+    $("#loader").hide();
     var inputHead = $("#head");
     var errorHead = $("#errorHead");
     var inputDesc = $("#desc");
     var errorDesc = $("#errorDesc");
     var inputFile = $("#file");
     var errorFile = $("#errorFile");
-    var files=0;
+    var files = 0;
+
     $(document).ready(function () {
+        
         $(".addSlide").click(function () {
             $("#formAddSlide").show();
             $(".addSlide").hide();
@@ -116,20 +122,18 @@ include ROOT . '/views/layouts/adminHeader.php';
 // Вешаем функцию на событие
 // Получим данные файлов и добавим их в переменную
 
-
-
-
-
-
+            $("#loader").show();
             var formData = new FormData($('form')[0]);
+
             $.ajax({
                 type: "POST",
                 processData: false,
                 contentType: false,
                 url: "/addSlide",
-                data:  formData
+                data: formData
             })
-                .done(function( data ) {
+                .done(function (data) {
+
                     window.location.href = "/editSlider";
                 });
         }
