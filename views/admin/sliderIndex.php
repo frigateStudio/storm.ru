@@ -23,7 +23,7 @@ include ROOT . '/views/layouts/adminHeader.php';
                 <p><?php echo $slide['content']; ?></p>
                 <img src="<?php echo $slide['url_image'] ?>"><br>
 
-                <a href="#" class="editButton">Изменить</a>
+                <a href="/editSlide/<?php echo $slide['id'];?>" class="editButton">Изменить</a>
                 <?php if (count($slides) > 1): ?>
 
                     <a href="deleteSlide/<?php echo $slide['id']; ?>" class="editButton">Удалить</a>
@@ -65,7 +65,7 @@ include ROOT . '/views/layouts/adminHeader.php';
 
     </div>
     <div id="loader">
-        Загрузка...
+        <img src="../template/img/backgrounds/load.svg">
     </div>
 
 
@@ -81,7 +81,7 @@ include ROOT . '/views/layouts/adminHeader.php';
     var files = 0;
 
     $(document).ready(function () {
-        
+
         $(".addSlide").click(function () {
             $("#formAddSlide").show();
             $(".addSlide").hide();
@@ -101,7 +101,6 @@ include ROOT . '/views/layouts/adminHeader.php';
         var flErrorHead = false;
         var flErrorDesc = false;
         var flErrorFile = false;
-
 
         if (!checkEmpty(inputHead)) {
             flErrorHead = true;

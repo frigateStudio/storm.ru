@@ -136,8 +136,8 @@ main {
     text-align: center;
     padding: 10px; }
     .controlSlider .slide img {
-      height: 200px;
-      width: 600px;
+      height: 250px;
+      width: 750px;
       margin: 20px 0; }
   .controlSlider .slide:nth-child(even) {
     background-color: #eee; }
@@ -202,5 +202,25 @@ main {
   text-align: center;
   width: 100%;
   background-color: rgba(1, 1, 1, 0.7); }
+
+.formEditSlide {
+  text-align: center; }
+  .formEditSlide h3 {
+    padding: 50px; }
+  .formEditSlide p {
+    margin-bottom: 20px; }
+  .formEditSlide #head {
+    width: 600px;
+    height: 30px;
+    font-size: 14pt; }
+  .formEditSlide #desc {
+    width: 600px;
+    height: 200px;
+    font-size: 14pt;
+    border: 1px solid #ccc; }
+  .formEditSlide #errorHead, .formEditSlide #errorDesc, .formEditSlide #errorFile {
+    color: red;
+    font-size: 10pt;
+    display: none; }
 
 /*# sourceMappingURL=adminStyle.css.map */

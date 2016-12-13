@@ -54,4 +54,29 @@ class AdminSliderController
         return true;
 
     }
+    public function actionEditSlide($id)
+    {
+        session_start();
+        if (!isset($_SESSION['auth']))
+            header("Location:/auth");
+        $title = "Редактирование слайда";
+        $slide =Slider::getInfoSlide($id);
+        require_once(ROOT . '/views/admin/editSlide.php');
+        return true;
+    }
+
+
+    public function actionSaveSlide(){
+        session_start();
+        if (!isset($_SESSION['auth']))
+            header("Location:/auth");
+
+        if (isset($_POST['head']) &&
+            isset($_POST['desc']) &&
+            isset($_POST['id'])
+        ) {
+            Slider::saveSlide($_POST['id'],$_POST['head'],$_POST['desc']);
+      }
+        return true;
+    }
 }
