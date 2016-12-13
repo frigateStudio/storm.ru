@@ -132,7 +132,6 @@ include ROOT . '/views/layouts/adminHeader.php';
                 data: formData
             })
                 .done(function (data) {
-
                     window.location.href = "/editSlider";
                 });
         }
