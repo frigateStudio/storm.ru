@@ -49,7 +49,8 @@ class AdminSliderController
             $uploadFile = ROOT."/media/slider/".$id.".".$exp;
             move_uploaded_file($_FILES['imgSlide']['tmp_name'], $uploadFile);
             $urlImg="media/slider/".$id.".".$exp;
-            Slider::addImageToSlide($id,$urlImg);
+           Slider::addImageToSlide($id,$uploadFile);
+
         }
            
         return true;
