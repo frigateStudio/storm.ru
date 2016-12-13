@@ -3,7 +3,8 @@ include ROOT . '/views/layouts/header.php';
 ?>
 <main>
     <div class="slider">
-        <?php foreach ($slides as $slide): ?>
+        <?php 
+        foreach ($slides as $slide): ?>
 
             <div>
                 <div class="slideText">

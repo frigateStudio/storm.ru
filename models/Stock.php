@@ -72,6 +72,7 @@ class Stock
         // Возвращаем значение count - количество
         $row = $result->fetch();
         return $row['count'];
+
     }
 
     public static function getPageNumber($id)

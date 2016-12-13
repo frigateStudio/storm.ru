@@ -1,6 +1,16 @@
 <?php
 
 return array(
+    //admin
+    'saveSlide'=>'adminSlider/saveSlide',
+    'addSlide'=>'adminSlider/addSlide',
+    'deleteSlide/([0-9]+)'=>'adminSlider/deleteSlide/$1',
+    'editSlide/([0-9]+)'=>'adminSlider/editSlide/$1',
+    'editSlider'=>'adminSlider/index',
+    'auth/exit'=>"admin/exit",
+    'auth'=>'admin/auth',
+    'admin'=>"admin/index",
+    //site
     'contacts' => 'contacts/index', //actionIndex in ContactsController
     'addQuestion' => 'contacts/AddQuestion',
     'addReview' => 'review/AddReview',
